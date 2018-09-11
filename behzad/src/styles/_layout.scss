@@ -14,7 +14,8 @@ footer {
 
 @include respond-above(lg) {
   main,
-  header {
+  header,
+  nav {
     margin: auto;
     width: 80%;
   }

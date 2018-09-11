@@ -1,11 +1,15 @@
 const gulp = require('gulp')
 
 const cleanCSS = require('gulp-clean-css')
+const concat = require('gulp-concat')
 const imagemin = require('gulp-imagemin')
+const minimist = require('minimist')
+const optimizejs = require('gulp-optimize-js')
 const plumber = require('gulp-plumber')
+const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
-const minimist = require('minimist');
+const uglify = require('gulp-uglify')
 
 const knownOptions = {
   string: 'root',
@@ -14,13 +18,24 @@ const knownOptions = {
 
 const options = minimist(process.argv.slice(2), knownOptions)
 
+gulp.task('javascript', () => {
+	return gulp.src(options.root+'/src/js/*.js')
+		.pipe(plumber())
+		.pipe(concat('bundled.js'))
+		.pipe(uglify())
+    .pipe(optimizejs())
+		.pipe(rename('bundled.min.js'))
+		.pipe(gulp.dest(options.root+'/build'))
+})
+
 gulp.task('css', function() {
-  return gulp.src(options.root+'/src/css/main.scss')
+  return gulp.src(options.root+'/src/styles/main.scss')
 	  .pipe(plumber())
 		.pipe(sourcemaps.init())
 	  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(sourcemaps.write())
 		.pipe(cleanCSS({compatibility: 'ie8'}))
+		.pipe(rename('main.css'))
     .pipe(gulp.dest(options.root+'/build/css'));
 })
 
@@ -38,7 +53,7 @@ gulp.task('html', () => {
 })
 
 
-gulp.task('build', gulp.series('css', 'images', 'html'))
+gulp.task('build', gulp.series('javascript', 'css', 'images', 'html'))
 
 /*
 gulp.task('javascript', () => {
