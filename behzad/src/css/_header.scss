@@ -1,0 +1,30 @@
+.logo-img {
+  height: auto;
+  width: 200px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.header {
+  flex: 1;
+  padding: 5px 15px;
+}
+
+.main_nav {
+  background-color: $primary;
+
+  a {
+    color: white;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: white;
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}

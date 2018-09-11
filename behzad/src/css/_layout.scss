@@ -1,0 +1,27 @@
+html,
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header,
+main,
+footer {
+  padding: 10px 20px;
+}
+
+@include respond-above(lg) {
+  main,
+  header {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+.flexible {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+}
