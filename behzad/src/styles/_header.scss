@@ -1,3 +1,8 @@
+.header {
+  padding: 10px 0;
+  align-items: center;
+}
+
 .logo-img {
   height: auto;
   width: 200px;
@@ -5,17 +10,22 @@
   img {
     width: 100%;
   }
+
+  &.small {
+    width: 50px;
+  }
 }
 
-.header {
-  flex: 1;
-  padding: 5px 15px;
+.full {
+  display: none;
 }
 
 .main_nav {
   background-color: $primary;
+  display: none;
 
   a {
+    border: 2px solid $primary;
     color: white;
     display: block;
     padding: 10px 20px;
@@ -29,8 +39,80 @@
   }
 }
 
-.sticky {
+.mobile {
+  height: 0;
+  overflow: hidden;
+}
+
+.mobile_nav {
+  background-color: $primary;
+
+  button {
+    
+  }
+}
+
+#title {
+  display: none;
+}
+
+.sticky_title {
+  background-color: white;
+  left: 313px;
+  margin: 0;
+  padding: 12px 0 8px 15px;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index:1;
+}
+
+.sticky {
+  background-color: white;
+  display: block;
+  margin: 0;
+  padding-top: 5px;
+  position: fixed;
+  top: 0;
+  width: 200px;
+  z-index:1;
+}
+
+.sticky_nav {
+  margin: 0;
+  position: fixed;
+  top: 53px;
+  width: 100%;
+  z-index:1;
+}
+
+.sticky_nav + main {
+  padding-top: 58px;
+}
+
+@include respond-above(lg) {
+  .full {
+    display: block;
+  }
+
+  .small {
+    display: none;
+  }
+
+  #title {
+    display: block;
+  }
+
+  .main_nav {
+    display: block;
+  }
+
+  .mobile_nav {
+    display: none;
+  }
+
+  .description {
+    flex: 1;
+    padding: 5px 15px;
+  }
 }
