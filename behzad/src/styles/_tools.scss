@@ -1,0 +1,28 @@
+.tool {
+  border: solid 3px #f0f0f0;
+  box-sizing: border-box;
+  flex: 1;
+  margin-bottom: 20px;
+  min-width: 100%;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s;
+
+  h1 {
+    font-size: $mt1;
+  }
+}
+
+@include respond-above(sm) {
+  .tool {
+    margin: 10px;
+    min-width: 300px;
+
+    &:hover {
+      border-right: solid 3px #ccc;
+      border-bottom: solid 3px #ccc;
+      box-shadow: 7px 7px 10px #ccc;
+      transform: translateY(-15px);
+    }
+  }
+}

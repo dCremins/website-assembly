@@ -1,3 +1,45 @@
 footer {
   background-color: $primary;
+  box-sizing: border-box;
+  color: white;
+  font-size: $mt1;
+  line-height: $mt1;
+  margin-top: 90px;
+  padding: 20px;
+  text-align: center;
+
+  a {
+    color: white;
+  }
+
+  article {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    padding: 20px;
+  }
+}
+
+.footer-img {
+  margin: 20px auto;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+@include respond-above(sm) {
+  footer {
+    .flexible {
+      margin: auto;
+      max-width: 1500px;
+      width: 80%;
+    }
+
+    article {
+      max-width: 50%;
+    }
+  }
 }

@@ -3,11 +3,13 @@ const gulp = require('gulp')
 const browserSync = require('browser-sync').create()
 const cleanCSS = require('gulp-clean-css')
 const concat = require('gulp-concat')
-const imagemin = require('gulp-imagemin')
+const del = require('del')
 const minimist = require('minimist')
 const optimizejs = require('gulp-optimize-js')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
+const imagemin = require('gulp-imagemin')
+const responsive = require('gulp-responsive')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const uglify = require('uglify-es')
@@ -28,7 +30,7 @@ gulp.task('serve', function(done) {
       baseDir: options.root+'/build'
     }
   })
-  gulp.watch(options.root+'/src/**/*', gulp.series('compile', 'reload'))
+  gulp.watch(options.root+'/src/**/*', gulp.series('quick-compile', 'reload'))
   done();
 })
 
@@ -60,8 +62,28 @@ gulp.task('css', function() {
 })
 
 gulp.task('images', () => {
-	return gulp.src(options.root+'/src/assets/*.png')
+	return gulp.src(options.root+'/src/assets/*.{png,jpg,jpeg}')
 		.pipe(plumber())
+    .pipe(responsive({
+      'staff-*': {
+        width: 150,
+        format: 'webp',
+        rename: {extname: ".webp"}
+      },
+      'icon-*': {
+        width: 150,
+        format: 'webp',
+        rename: {extname: ".webp"}
+      },
+      'logo-*': {
+        format: 'webp',
+        rename: {extname: ".webp"}
+      },
+      'misc-*': {
+        format: 'webp',
+        rename: {extname: ".webp"}
+      },
+    }))
 		.pipe(imagemin())
 		.pipe(gulp.dest(options.root+'/build/assets'))
 })
@@ -72,9 +94,11 @@ gulp.task('html', () => {
 		.pipe(gulp.dest(options.root+'/build'))
 })
 
-gulp.task('compile', gulp.series('javascript', 'css', 'images', 'html'))
+gulp.task('compile', gulp.series(()=>{return del(options.root+'/build')}, 'javascript', 'css', 'images', 'html'))
+gulp.task('quick-compile', gulp.series('javascript', 'css', 'html'))
 
 gulp.task('build', gulp.series('compile', 'serve'))
+gulp.task('build-images', gulp.series(()=>{return del(options.root+'/build/assets')}, 'images'))
 
 /*
 gulp.task('javascript', () => {

@@ -12,7 +12,9 @@
   }
 
   &.small {
-    width: 50px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
   }
 }
 
@@ -40,15 +42,55 @@
 }
 
 .mobile {
-  height: 0;
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-flow: column;
+  max-height: 0;
   overflow: hidden;
+  transition: all 1s;
+
+  a {
+    background-color: $primary;
+    border: 2px solid $primary;
+    box-sizing: border-box;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background-color: white;
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
 }
 
-.mobile_nav {
+.hamburger {
   background-color: $primary;
+  border: 2px solid $primary;
+  box-sizing: border-box;
+  width: 100%;
 
-  button {
-    
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background-color: white;
+  }
+
+  &.is-active {
+    background-color: white;
+
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
+      background-color: $primary;
+    }
+
+    +.mobile {
+      max-height: 600px;
+    }
   }
 }
 
@@ -67,16 +109,6 @@
   z-index:1;
 }
 
-.sticky {
-  background-color: white;
-  display: block;
-  margin: 0;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  width: 200px;
-  z-index:1;
-}
 
 .sticky_nav {
   margin: 0;
@@ -90,13 +122,37 @@
   padding-top: 58px;
 }
 
-@include respond-above(lg) {
+.sticky_mobile {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+
+.sticky_mobile + main {
+  padding-top: 45px;
+}
+
+@include respond-above(sm) {
   .full {
     display: block;
   }
 
-  .small {
+  .small,
+  .logo-img.small {
     display: none;
+
+    &.sticky {
+      background-color: white;
+      display: block;
+      margin: 0;
+      padding-top: 5px;
+      position: fixed;
+      top: 0;
+      width: 200px;
+      z-index:1;
+    }
   }
 
   #title {
@@ -114,5 +170,9 @@
   .description {
     flex: 1;
     padding: 5px 15px;
+  }
+
+  .sticky-padding {
+    padding-top: 55px;
   }
 }

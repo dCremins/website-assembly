@@ -10,15 +10,15 @@
   <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header id="home">
     <div class="flexible header">
       <section>
         <a id="logo_holder" href="#" alt="Driver and Transportation Analytics Lab" class="logo-img full">
-          <img atl="Icon Logo" src="assets/logo-icon.png">
-          <img id="logo_big" atl="Logo with Icon and Text" src="assets/logo-text.png">
+          <img atl="Icon Logo" src="assets/logo-icon.webp">
+          <img id="logo_big" atl="Logo with Icon and Text" src="assets/logo-text.webp">
         </a>
         <a id="logo_small" atl="Just Text Logo" href="#" alt="Driver and Transportation Analytics Lab" id="logo" class="logo-img small">
-          <img src="assets/logo-text.png">
+          <img src="assets/logo-text.webp">
         </a>
       </section>
       <section id="header" class="description">
@@ -44,8 +44,8 @@
     </nav>
   </section>
 
-  <section id="navbar" class="mobile_nav">
-    <button class="hamburger hamburger--elastic" id="mobile_button" type="button"
+  <section id="mobile_navbar" class="mobile_nav">
+    <button class="hamburger hamburger--collapse" id="mobile_button" type="button"
           aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
@@ -61,58 +61,72 @@
   </section>
 
   <main>
-    <section class="flexible">
+    <section id="tools" class="flexible">
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+        <div class="speaker-img">
+          <img src="assets/icon-150x150.webp">
+        </div>
          <h1>Traffic Violation Video Archive</h1>
          <p>Traffic Violation Video Archive provides a central resource to search for traffic violation in Wake county for NCDOT and law makers use.</p>
          <a href="/NCDOT_TVV/index.php">Visit Archive System</a>
       </article>
 
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+         <div class="speaker-img">
+           <img src="assets/icon-150x150.webp">
+         </div>
          <h1>PedBike Counts System</h1>
          <p>This portal provides a comprehensive set of tools to collect and analyze pedestrian and bicycle counts systems developed with TMG capability</p>
          <a href="http://itredatalab.org">Visit PedBike Counts System</a>
       </article>
 
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+         <div class="speaker-img">
+           <img src="assets/icon-150x150.webp">
+         </div>
          <h1>On-Ramp Signal's Evaluation Tool</h1>
          <p>This tool is designed to help NCDOT and its stakeholders to analyze the operation of on-ramp signals on NC I-540 facility.</p>
          <a href="/rmdash">Access Online Tool</a>
       </article>
 
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+         <div class="speaker-img">
+           <img src="assets/icon-150x150.webp">
+         </div>
          <h1>Intersection Life Cyle Tool</h1>
          <p>Intersection CostVAL tool provides facilities to evaluate life cycle costs for different intersection alternatives.</p>
          <a href="http://152.14.29.4/LCCA.Jan2018.zip">Download the Latest Version Along with Users Guide</a>
       </article>
 
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+         <div class="speaker-img">
+           <img src="assets/icon-150x150.webp">
+         </div>
          <h1>Signal Prioritization</h1>
          <p>The NCDOT's cloud based signal prioritization tool provide facilities to NCDOT staff and engineers to prioritize signal timing plans change.</p>
          <a href="http://spm.itredatalab.org">Visit Online Tool</a>
       </article>
 
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+         <div class="speaker-img">
+           <img src="assets/icon-150x150.webp">
+         </div>
          <h1>FREEVAL</h1>
          <p>FREEVAL is the official computational engine for freeway facilities analysis in Highway Capacity Manual (HCM). The latest version is based on HCM6</p>
          <a href="http://freeval.org">Visit FREEVAL Home Page</a>
       </article>
 
       <article class="tool">
-         <img src="assets/150x150.png" class="speaker-img">
+         <div class="speaker-img">
+           <img src="assets/icon-150x150.webp">
+         </div>
          <h1>STREETVAL</h1>
          <p> STREETVAL is the computational engine to analyze arterial streets based on Highway Capacity Manual (HCM)</p>
          <a href="http://freeval.org">Visit FREEVAL Home Page</a>
       </article>
     </section>
 
-    <section>
+    <section id="whatwedo">
       <h2>What We Do</h2>
       <article>
         <h3>Institute for Transportation Research and Education</h3>
@@ -142,11 +156,198 @@
       </article>
     </section>
 
+    <section id="whoweare" class="staff_section">
+      <h2>Who We Are</h2>
+      <ol class="tabs">
+        <li><a id="tab_1" class="active_tab">ITRE</a></li>
+        <li><a id="tab_2">Civil Engineering Department</a></li>
+        <li><a id="tab_3">Former Collaborators</a></li>
+      </ol>
+      <ul id="itre_staff" class="tab-content active_content">
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-Behzad.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Behzad Aghdashi, Ph.D.</h3>
+            <h4>Research Associate at ITRE</h4>
+            <p>
+              Dr. Aghdashi has a background in industrial engineering and operations research.
+              His interests are Freeway and Arterial Streets Analysis, Traffic Modeling, and Simulation.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-Chase.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Thomas Chase, P.E.</h3>
+            <h4>Research Associate at ITRE</h4>
+            <p>
+              Thomas is a research associate in ITRE's highways systems group.
+              He is leading and working on a number of projects in ITRE DaTA lab.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-alay.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Alaykumar Patel</h3>
+            <h4>Graduate Student</h4>
+            <p>
+              Alay is a graduate student in Computer Science (CS) program at NC State University.
+              He is working on FREEVAL and STREETVAL tools.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <ul id="civil_staff" class="tab-content">
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-Nagui.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Nagui Rouphail, Ph.D.</h3>
+            <h4>Professor at NCSU Civil Engineering Department</h4>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-Billy.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Billy Williams</h3>
+            <h4>Professor at NCSU Civil Engineering Department</h4>
+          </div>
+        </li>
+      </ul>
+
+      <ul id="former_staff" class="tab-content">
+        <li class="staff">
+          <div class="staff-content">
+            <h3>J. Lake Trask</h3>
+            <h4>Transportation Analyst at Kittelson and Associates Inc.</h4>
+            <p>
+              Dr. J. Lake Trask has graduated from Operations Research Program form NC State University.
+              While he was in ITRE, he made major contributions to the FREEVAL tool.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-content">
+            <h3>Gowtham Ramesh</h3>
+            <h4>Software Engineer at Microsoft</h4>
+            <p>
+              Gowtham has graduated from computer science program at NC State University.
+              During his studies at NCSU, he made remarkable contributions to STREETVAL tool.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-content">
+            <h3>Parth Satra</h3>
+            <h4>Software Engineer at Amazon</h4>
+            <p>
+              Parth has graduated from computer science program at NC State University.
+              During his studies at NCSU, he made remarkable contributions to STREETVAL tool.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-content">
+            <h3>Sandeep Samdaria</h3>
+            <h4>Software Engineer at Amazon</h4>
+            <p>
+              Sandeep has graduated from computer science program at NC State University.
+              During his studies at NCSU, he made remarkable contributions to CostVAL and STREETVAL tool.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-content">
+            <h3>Jigar Sharda</h3>
+            <h4>Software Engineer at Facebook</h4>
+            <p>
+              Jigar has graduated from computer science program at NC State University.
+              During his studies at NCSU, he made remarkable contributions to STREETVAL tool.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-content">
+            <h3>Shu Liu</h3>
+            <h4>Software Engineer at Bloomberg LP</h4>
+            <p>
+              Shu has graduated from civil engineering program at NC State University.
+              During his studies at NCSU, he made remarkable contributions to FREEVAL tool.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-nabaruna.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Nabaruna Karmakar</h3>
+            <h4>PhD Student in Industrial and Systems Engineering</h4>
+            <p>
+              Nabaruna is a graduate student in Industrial and System Engineering (ISE) department.
+              She is one of the developers of PedBike Automation System in DaTA lab.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-prashant.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Prashant Pandey</h3>
+            <h4>Graduate Student in Computer Science</h4>
+            <p>
+              Prashant graduated from Computer Science (CS) program at NC State University.
+              He has contributd to CostVAL and STREETVAL tools.
+            </p>
+          </div>
+        </li>
+        <li class="staff">
+          <div class="staff-image">
+            <img src="assets/staff-chinmoy.webp" />
+          </div>
+          <div class="staff-content">
+            <h3>Chinmoy Jyoti</h3>
+            <h4>Graduate Student in Computer Science</h4>
+            <p>
+              Chinmoy graduated from Computer Science (CS) program at NC State University.
+              He contributed to Signal Prioritization tool.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
   </main>
 
-  <footer>
+  <footer id="location">
+    <section class="flexible">
+      <article>
+        <p>For any questions or further inquiries, please contact
+          <a href="mailto:saghdas@ncsu.edu">Behzad Aghdashi </a>(saghdas@ncsu.edu)</p>
 
-    <script src="./bundled.min.js"></script>
+        <p>
+          909 Capability Dr, Suite 3600 <br />
+          Raleigh, NC, 27606
+        </p>
+        <p>Copyright 2018</p>
+      </article>
+      <article class="footer-img">
+          <img alt="Research Building IV on Centennial Campus at NC State University" src="assets/misc-building.webp" />
+      </article>
+    </section>
+    <script src="./bundled.min.js" defer></script>
   </footer>
 </body>
 </html>

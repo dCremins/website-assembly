@@ -10,13 +10,35 @@ body {
 
 main {
   box-sizing: border-box;
+  padding: 0 20px;
   width: 100%;
+
+  &.flexible {
+    align-items: center;
+  }
+
+  section {
+    padding: 25px 0 0;
+  }
+}
+
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 p,
 li {
   font-weight: lighter;
   margin: 0.5em 0;
+}
+
+a {
+  color: $primary;
+
+  &:visited {
+    color: #cc0000;
+  }
 }
 
 h1 {
@@ -30,6 +52,7 @@ h2 {
   font-size: $mt1;
   font-weight: bold;
   margin: 0.5em 0;
+  width: 100%;
 }
 
 h3 {
@@ -38,10 +61,21 @@ h3 {
   margin: 1em 0 0.5em 0;
 }
 
-@include respond-above(lg) {
+@include respond-above(sm) {
   main {
     flex-grow: 1;
-    padding: 15px 0;
+
+    section {
+      padding: 95px 0 0;
+    }
+  }
+
+  main,
+  header,
+  nav {
+    margin: auto;
+    max-width: 1500px;
+    width: 80%;
   }
 
   body {
