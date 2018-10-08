@@ -11,6 +11,18 @@
   h1 {
     font-size: $mt1;
   }
+
+  .icon {
+    border-radius: 100px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 150px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 @include respond-above(sm) {

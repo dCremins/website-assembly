@@ -1,0 +1,21 @@
+<footer id="location">
+  <section class="flexible">
+    <article>
+      <p>For any questions or further inquiries, please contact
+        <a id="footer_mailto" href="mailto:saghdas@ncsu.edu">Behzad Aghdashi </a>(saghdas@ncsu.edu)</p>
+
+      <p>
+        909 Capability Dr, Suite 3600 <br />
+        Raleigh, NC, 27606
+      </p>
+      <p>Copyright 2018</p>
+    </article>
+    <article class="footer-img">
+        <img class="lazy" data-src="assets/misc-building.webp" alt="Research Building IV on Centennial Campus at NC State University" />
+    </article>
+  </section>
+  <p class="disclaimer">
+    This site collects Google Analytics information for internal monitoring purposes. <a id="privacy_policy" href="privacy.html">Read our Privacy Policy</a> or <a href="https://tools.google.com/dlpage/gaoptout/">opt-out of Google Analytics.</a>
+  </p>
+  <script src="./bundled.min.js" defer></script>
+</footer>

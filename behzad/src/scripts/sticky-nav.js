@@ -12,8 +12,8 @@ const title = document.getElementById("title")
 
 // Get the offset position of the navbar
 const sticky_title = title.offsetTop-12;
-const sticky_logo = logo.offsetTop-5;
-const sticky_nav = navbar.offsetTop-49;
+const sticky_logo = logo.offsetTop-18;
+const sticky_nav = navbar.offsetTop-78;
 const sticky_mobile = mobile.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position

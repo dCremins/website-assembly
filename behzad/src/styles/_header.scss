@@ -1,6 +1,7 @@
 .header {
-  padding: 10px 0;
   align-items: center;
+  padding: 10px 0;
+  position: relative;
 }
 
 .logo-img {
@@ -96,13 +97,12 @@
 
 #title {
   display: none;
+  padding: 16px 0 16px 15px;
 }
 
 .sticky_title {
   background-color: white;
-  left: 313px;
   margin: 0;
-  padding: 12px 0 8px 15px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -169,10 +169,14 @@
 
   .description {
     flex: 1;
-    padding: 5px 15px;
-  }
+    padding: 5px 15px 5px 0;
 
-  .sticky-padding {
-    padding-top: 55px;
+    p {
+      padding-left: 15px;
+    }
+
+    &.sticky_padding {
+      padding-top: 55px;
+    }
   }
 }

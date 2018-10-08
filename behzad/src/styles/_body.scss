@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   font-family: $font-family;
   font-size: $mt0;
+  line-height: 1.5em;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -59,6 +60,12 @@ h3 {
   font-size: $mt0;
   font-weight: bold;
   margin: 1em 0 0.5em 0;
+}
+
+.privacy {
+  h1 {
+    margin: 1em 0;
+  }
 }
 
 @include respond-above(sm) {

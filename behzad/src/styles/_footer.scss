@@ -30,6 +30,19 @@ footer {
   }
 }
 
+.disclaimer {
+  font-size: 0.563em;
+  font-weight: lighter;
+  line-height: 1.5em;
+  width: 100%;
+
+  a {
+    color: white;
+  }
+}
+
+
+
 @include respond-above(sm) {
   footer {
     .flexible {

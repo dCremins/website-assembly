@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include 'google.nunjucks' %}
+  {% include 'head.nunjucks' %}
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TN5857K"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+{% include 'header.nunjucks' %}
+  <main>
+    {% include 'tools.nunjucks' %}
+
+    <section id="whatwedo">
+      <h2>What We Do</h2>
+      <article>
+        <h3>Institute for Transportation Research and Education</h3>
+        <p>
+          The Institute for Transportation Research and Education (ITRE) is an institutional center located at NC State University. Chartered by the North Carolina General Assembly in 1978, ITRE conducts surface and air transportation research, training, and technical support activities for municipal, state, federal, and international clients in order to address critical transportation issues. ITRE is committed to developing leadership in its study of transportation issues through fostering analytical thinking, integrating technology in education and research, serving as a catalyst for problem solving, and cultivating professionals and students dedicated to excellence in transportation.
+        </p>
+      </article>
+      <article>
+        <h3>Driver and Transportation Analytics Laboratory</h3>
+        <p>
+          DaTA lab in ITRE has access to NC State Universities resources including faculties, students, and staff as well as hardware and software to offer:
+
+          <ul>
+            <li>Analyze and Mine Big Data</li>
+            <li>Store and Share Data and Tools</li>
+            <li>Application Oriented Tool Development</li>
+          </ul>
+        </p>
+        <p>
+          Connection to clients is an important goal for DaTA labs in ITRE. As such, any possible effort is performed to assure complete technology transfer including:
+          <ul>
+            <li>Training (Webinars, in Class, etc.)</li>
+            <li>Packages Customization</li>
+            <li>Tools Support</li>
+          </ul>
+        </p>
+      </article>
+    </section>
+
+    {% include 'staff.nunjucks' %}
+  </main>
+  {% include 'footer.nunjucks' %}
+</body>
+</html>

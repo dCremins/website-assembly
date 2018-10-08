@@ -8,8 +8,10 @@ function toggleMobile() {
   if (mobileActive) {
     mobileActive = false
     hamburger.classList.remove('is-active')
+    hamburger.setAttribute('aria-expanded', 'false')
   } else {
     mobileActive = true
     hamburger.classList.add('is-active')
+    hamburger.setAttribute('aria-expanded', 'true')
   }
 }

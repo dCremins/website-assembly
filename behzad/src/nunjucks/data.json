@@ -1,0 +1,154 @@
+{
+  "title":"Driver and Transportation Analytics Lab",
+  "author": "Behzad Aghdashi",
+  "nav": [
+    {
+      "label": "Home",
+      "id": "home"
+    }, {
+      "label": "Tools",
+      "id": "tools"
+    }, {
+      "label": "What We Do",
+      "id": "whatwedo"
+    }, {
+      "label": "Who We Are",
+      "id": "whoweare"
+    }, {
+      "label": "Location",
+      "id": "location"
+    }
+  ],
+  "tools": [
+    {
+      "icon": "traffic",
+      "title": "Traffic Violation Video Archive",
+      "description": "Traffic Violation Video Archive provides a central resource to search for traffic violation in Wake county for NCDOT and law makers use.",
+      "link": "http://itredatalab.org/NCDOT_TVV/index.php"
+    }, {
+      "icon": "bike",
+      "title": "PedBike Counts System",
+      "description": "This portal provides a comprehensive set of tools to collect and analyze pedestrian and bicycle counts systems developed with TMG capability",
+      "link": "http://itredatalab.org/"
+    }, {
+      "icon": "ramp",
+      "title": "On-Ramp Signal's Evaluation Tool",
+      "description": "This tool is designed to help NCDOT and its stakeholders to analyze the operation of on-ramp signals on NC I-540 facility.",
+      "link": "http://rm.itredatalab.org/"
+    }, {
+      "icon": "intersection",
+      "title": "Intersection Life Cyle Tool",
+      "description": "Intersection CostVAL tool provides facilities to evaluate life cycle costs for different intersection alternatives.",
+      "link": "/downloads/LCCA.Jan2018.zip"
+    }, {
+      "icon": "signal",
+      "title": "Signal Prioritization",
+      "description": "The NCDOT's cloud based signal prioritization tool provide facilities to NCDOT staff and engineers to prioritize signal timing plans change.",
+      "link": "http://spm.itredatalab.org/"
+    }, {
+      "icon": "freeval",
+      "title": "FREEVAL",
+      "description": "FREEVAL is the official computational engine for freeway facilities analysis in Highway Capacity Manual (HCM). The latest version is based on HCM6",
+      "link": "http://freeval.org/"
+    }, {
+      "icon": "streetval",
+      "title": "STREETVAL",
+      "description": "STREETVAL is the computational engine to analyze arterial streets based on Highway Capacity Manual (HCM)",
+      "link": "http://freeval.org/"
+    }
+  ],
+  "staffGroup": [
+    {
+      "name": "ITRE",
+      "tab": "1",
+      "id": "itre_staff",
+      "members": [
+        {
+    			"name": "Behzad Aghdashi, Ph.D.",
+    			"title": "Research Associate at ITRE",
+    			"description": "Dr. Aghdashi has a background in industrial engineering and operations research. His interests are Freeway and Arterial Streets Analysis, Traffic Modeling, and Simulation.",
+    			"image": "Behzad"
+    		}, {
+    			"name": "Thomas Chase, P.E.",
+    			"title": "Research Associate at ITRE",
+    			"description": "Thomas is a research associate in ITRE's highways systems group. He is leading and working on a number of projects in ITRE DaTA lab.",
+    			"image": "Chase"
+    		}, {
+    			"name": "Alaykumar Patel",
+    			"title": "Graduate Student",
+    			"description": "Alay is a graduate student in Computer Science (CS) program at NC State University. He is working on FREEVAL and STREETVAL tools.",
+    			"image": "alay"
+    		}
+      ]
+    }, {
+      "name": "Civil Engineering Department",
+      "tab": "2",
+      "id": "civil_staff",
+      "members": [
+        {
+    			"name": "Nagui Rouphail, Ph.D.",
+    			"title": "Professor at NCSU Civil Engineering Department",
+    			"description": "",
+    			"image": "Nagui"
+    		}, {
+    			"name": "Billy Williams",
+    			"title": "Professor at NCSU Civil Engineering Department",
+    			"description": "",
+    			"image": "Billy"
+    		}
+      ]
+    }, {
+      "name": "Former Collaborators",
+      "tab": "3",
+      "id": "former_staff",
+      "members": [
+        {
+    			"name": "J. Lake Trask",
+    			"title": "Transportation Analyst at Kittelson and Associates Inc.",
+    			"description": "Dr. J. Lake Trask has graduated from Operations Research Program form NC State University. While he was in ITRE, he made major contributions to the FREEVAL tool.",
+    			"image": ""
+    		}, {
+    			"name": "Gowtham Ramesh",
+    			"title": "Software Engineer at Microsoft",
+    			"description": "Gowtham has graduated from computer science program at NC State University. During his studies at NCSU, he made remarkable contributions to STREETVAL tool.",
+    			"image": ""
+    		}, {
+    			"name": "Parth Satra",
+    			"title": "Software Engineer at Amazon",
+    			"description": "Parth has graduated from computer science program at NC State University. During his studies at NCSU, he made remarkable contributions to STREETVAL tool.",
+    			"image": ""
+    		}, {
+    			"name": "Sandeep Samdaria",
+    			"title": "Software Engineer at Amazon",
+    			"description": "Sandeep has graduated from computer science program at NC State University. During his studies at NCSU, he made remarkable contributions to CostVAL and STREETVAL tool.",
+    			"image": ""
+    		}, {
+    			"name": "Jigar Sharda",
+    			"title": "Software Engineer at Facebook",
+    			"description": "Jigar has graduated from computer science program at NC State University. During his studies at NCSU, he made remarkable contributions to STREETVAL tool.",
+    			"image": ""
+    		}, {
+    			"name": "Shu Liu",
+    			"title": "Software Engineer at Bloomberg LP",
+    			"description": "Shu has graduated from civil engineering program at NC State University. During his studies at NCSU, he made remarkable contributions to FREEVAL tool.",
+    			"image": ""
+    		}, {
+    			"name": "Nabaruna Karmakar",
+    			"title": "PhD Student in Industrial and Systems Engineering",
+    			"description": "Nabaruna is a graduate student in Industrial and System Engineering (ISE) department. She is one of the developers of PedBike Automation System in DaTA lab.",
+    			"image": "nabaruna"
+    		}, {
+    			"name": "Prashant Pandey",
+    			"title": "Graduate Student in Computer Science",
+    			"description": "Prashant graduated from Computer Science (CS) program at NC State University. He has contributd to CostVAL and STREETVAL tools.",
+    			"image": "prashant"
+    		}, {
+    			"name": "Chinmoy Jyoti",
+    			"title": "Graduate Student in Computer Science",
+    			"description": "Chinmoy graduated from Computer Science (CS) program at NC State University. He contributed to Signal Prioritization tool.",
+    			"image": "chinmoy"
+    		}
+      ]
+    }
+  ]
+}

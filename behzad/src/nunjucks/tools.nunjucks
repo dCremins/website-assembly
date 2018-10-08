@@ -1,0 +1,13 @@
+<section id="tools" class="flexible">
+  {% for tool in tools %}
+    <article class="tool">
+      <picture>
+        <source srcset="assets/icon-{{tool.icon}}.webp" type="image/webp">
+        <img src="assets/icon-{{staff.icon}}.png" alt="{{tool.title}} Logo Icon"/>
+      </picture>
+      <h1>{{tool.title}}</h1>
+      <p>{{tool.description}}</p>
+      <a id="{{ tool.title | replace(' ', '_') }}" href="{{tool.link}}">Visit {{tool.title}}</a>
+    </article>
+  {% endfor %}
+</section>

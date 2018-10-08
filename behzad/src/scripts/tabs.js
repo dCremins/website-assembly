@@ -1,3 +1,5 @@
+let act_con = 'itre'
+
 const itre = document.getElementById('tab_1')
 const civil = document.getElementById('tab_2')
 const former = document.getElementById('tab_3')
@@ -6,14 +8,12 @@ const itre_staff = document.getElementById('itre_staff')
 const civil_staff = document.getElementById('civil_staff')
 const former_staff = document.getElementById('former_staff')
 
-let act_con = 'itre'
 
-itre.addEventListener('click', () => toggleTabContent('itre') )
-civil.addEventListener('click', () => toggleTabContent('civil') )
-former.addEventListener('click', () => toggleTabContent('former') )
+itre ? itre.addEventListener('click', () => toggleTabContent('itre') ) : ''
+civil ? civil.addEventListener('click', () => toggleTabContent('civil') ) : ''
+former ? former.addEventListener('click', () => toggleTabContent('former') ) : ''
 
 function toggleTabContent(clicked) {
-  console.log(clicked, ', ', act_con)
   if (clicked === act_con) {
     return
   } else {
