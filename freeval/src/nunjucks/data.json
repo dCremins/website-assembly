@@ -1,0 +1,187 @@
+{
+  "title":"FREEVAL",
+  "author": "Behzad Aghdashi",
+  "bolded": "FREEVAL",
+  "description": "is a powerful macroscopic freeway analysis tool based on Highway Capacity Manual (HCM). Its unique features include processing speed, software reliability and user friendliness",
+  "contact": "support@freeval.org",
+  "contact_label": "support@freeval.org",
+  "address1": "909 Capability Dr, Suite 3600",
+  "address2": "Raleigh, NC, 27606",
+  "nav": [
+    {
+      "label": "Home",
+      "id": "home"
+    }, {
+      "label": "Training",
+      "id": "training"
+    }, {
+      "label": "Downloads",
+      "id": "downloads"
+    }, {
+      "label": "FAQ and Resources",
+      "id": "faq"
+    }, {
+      "label": "Contact",
+      "id": "contact"
+    }
+  ],
+  "training": {
+    "id": "training",
+    "title": "Training",
+    "description": "We provide different types of training for FREEVAL including Workshops, Classes, Webinars and etc. Please contact us to get more detailed information on FREEVAL training.",
+    "articles": [
+      {
+        "title":"Classes",
+        "text":"We provide classes for any specific use case such as Travel Time Reliability or work zone analysis.",
+        "link": "mailto:classes@freeval.org"
+      },
+      {
+        "title":"Workshops",
+        "text":"We provide workshops focusing on special use cases for FREEVAL. The workshops can be either hands-on or not. Please contact us for more information about our workshops.",
+        "link": "mailto:workshop@freeval.org"
+      },
+      {
+        "title":"Webinars",
+        "text":"We offer FREEVAL webinars on any topic related to FREEVAL as well as Highway Capacity Manual's analyses. Please contact us to get more information about our webinars.",
+        "link": "mailto:webinar@freeval.org"
+      }
+    ],
+    "resources": [
+      {
+        "image": {
+          "alt": "Freeval class computer lab",
+          "url": "misc-class2"
+        }
+      },
+      {
+        "image": {
+          "alt": "Freeval workshop presentation and work groups",
+          "url": "misc-workshop1"
+        }
+      }
+    ]
+  },
+  "tools": [
+    {
+      "icon": "freeval",
+      "title": "FREEVAL+",
+      "description": "",
+      "list": [
+        "Google Maps Integration",
+        "Planning Level Data Entry",
+        "Auto-Calibration"
+      ],
+      "button": "Download FREEVAL+",
+      "link": "/download/FREEVAL_PLUS_20180219.zip"
+    }, {
+      "icon": "freeval",
+      "title": "FREEVAL-NC",
+      "description": "",
+      "list": [
+        "Built-in NC Freeways",
+        "Google Maps Integration",
+        "NC Specific Parameters"
+      ]
+    }, {
+      "icon": "freeval",
+      "title": "FREEVAL-WZ",
+      "description": "",
+      "list": [
+        "Planning Level Data Entry",
+        "PDF Reports",
+        "Work Zone Analysis "
+      ],
+      "button": "Download FREEVAL-WZ",
+      "link": "/download/FREEVAL_WZ.zip"
+    }, {
+      "icon": "freeval",
+      "title": "FREEVAL-DSS",
+      "description": "",
+      "list": [
+        "Simulates a TMC",
+        "Implemets ATDM Strategies",
+        "Assesses Impact of ATM"
+      ],
+      "button": "Download FREEVAL-DSS",
+      "link": "/download/FREEVAL_DSS.zip"
+    }, {
+      "icon": "freeval",
+      "title": "FREEVAL-HCM",
+      "description": "",
+      "list": [
+        "Freeway Analysis",
+        "Reliability Analysis "
+      ],
+      "button": "Download FREEVAL-HCM",
+      "link": "/download/FREEVAL_HCM_20180328.zip"
+    }
+  ],
+  "faq": {
+    "id": "faq",
+    "title": "FAQ and Resources",
+    "description": "Remember! If you cannot find your question here, send it to support@freeval.org",
+    "articles": [
+      {
+        "title":"What are the Operating System Requirements for FREEVAL?",
+        "text":"FREEVAL is developed in Java environment and as such it can be run under any operating systems ranging from MS Windoes and Mac OS to Linux operating system. The only requirement is to install Java Runtime Environment (JRE) version 8 and later."
+      },
+      {
+        "title":"How Similar or Different is FREEVAL Compared to HCM?",
+        "text":"FREEVAL replicates the freeway analysis in Highway Capacity Manual (HCM). All methods documented in Chapters 10, 11, 12, 13, 14, 25, and 26 are implemented in FREEVAL. This includes freeway facilities, reliailty, managed lanes, work zones and etc. analyses."
+      },
+      {
+        "title":"What do I need to do if I have Questions or Problems Using FREEVAL?",
+        "text":"If you have any problems using FREEVAL, please do not hesitate to contact us at support@freeval.org."
+      },
+      {
+        "title":"What would it take for me to customize FREEVAL to my own specific use cases?",
+        "text":"We do customize FREEVAL to match your specific needs. This can range from connecting FREEVAL to in-house data sources to standard reports generations. please do not hesitate to contact us at support@freeval.org."
+      }
+    ],
+    "resources": [
+      {
+        "title": "FREEVAL User Guides",
+        "links": [
+          {
+            "url": "/docs/FREEVAL_2015e_User_Guide_Final.pdf",
+            "text": "FREEVAL-HCM Users Guide"
+          },
+          {
+            "url": "/docs/FREEVAL_WZ_Users_Guide.pdf",
+            "text": "FREEVAL-WZ Users Guide"
+          }
+        ]
+      },
+      {
+        "title": "YouTube Clips",
+        "image": {
+          "url": "icon-youtube",
+          "alt": "Youtube Play Icon",
+          "class": "icon"
+        },
+        "links": [{
+          "url": "https://www.youtube.com/channel/UCAEqbVtyZXpb27rp8p95mIQ",
+          "text": "ITRE's YouTube Channel"
+        }]
+      },
+      {
+        "title": "Other Resources",
+        "image": {
+          "url": "icon-tools",
+          "alt": "Wrench Circle Icon",
+          "class": "icon"
+        },
+        "links": [
+          {
+            "url": "http://itredatalab.org/",
+            "text": "ITRE DaTA Lab"
+          },
+          {
+            "url": "https://hcmvolume4.org/",
+            "text": "HCM Volume IV"
+          }
+        ]
+      }
+    ]
+  }
+}

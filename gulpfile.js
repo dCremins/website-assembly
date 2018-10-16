@@ -102,8 +102,16 @@ gulp.task('images', () => {
         rename: {extname: ".png"}
       }],
     }, {
-      errorOnUnusedConfig: false
+      errorOnUnusedConfig: false,
+      allowEmpty: true
     }))
+		.pipe(imagemin())
+		.pipe(gulp.dest(options.root+'/build/assets'))
+})
+
+gulp.task('imageMin', () => {
+	return gulp.src(options.root+'/build/assets/*')
+		.pipe(plumber())
 		.pipe(imagemin())
 		.pipe(gulp.dest(options.root+'/build/assets'))
 })
@@ -153,7 +161,7 @@ gulp.task('html', function() {
     .pipe(gulp.dest(options.root+'/build'))
 })
 
-gulp.task('compile', gulp.series(()=>{return del(options.root+'/build')}, 'javascript', 'css', 'images', 'favicon', 'html'))
+gulp.task('compile', gulp.series(()=>{return del(options.root+'/build')}, 'javascript', 'css', 'images', 'imageMin', 'favicon', 'html'))
 gulp.task('quick-compile', gulp.series('javascript', 'css', 'html'))
 
 gulp.task('build', gulp.series('compile', 'serve'))

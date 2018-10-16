@@ -1,0 +1,198 @@
+.header {
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+
+  .logo,
+  .sticky_bumper,
+  .description {
+    z-index: 1;
+  }
+}
+
+.logo-img {
+  height: auto;
+  width: 200px;
+
+  img {
+    margin: 0;
+    width: 100%;
+  }
+
+  &.small {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.full {
+  display: none;
+}
+
+.main_nav {
+  background-color: $primary;
+  display: none;
+
+  a {
+    border: 2px solid $primary;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: white;
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+.mobile {
+  border-bottom: 2px solid white;
+  display: flex;
+  flex-flow: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s;
+
+  a {
+    background-color: $primary;
+    border: 2px solid $primary;
+    box-sizing: border-box;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background-color: white;
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+.hamburger {
+  background-color: $primary;
+  border: 2px solid $primary;
+  box-sizing: border-box;
+  width: 100%;
+
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background-color: white;
+  }
+
+  &.is-active {
+    background-color: white;
+
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
+      background-color: $primary;
+    }
+
+    +.mobile {
+      max-height: 600px;
+    }
+  }
+}
+
+#title {
+  display: none;
+  padding: 16px 0 16px 15px;
+}
+
+.sticky_title {
+  background-color: white;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+
+
+.sticky_nav {
+  margin: 0;
+  position: fixed;
+  top: 53px;
+  width: 100%;
+  z-index:1;
+}
+
+.sticky_nav + main {
+  padding-top: 58px;
+}
+
+.sticky_mobile {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+
+.sticky_bumper {
+  background-color: white;
+  height: 53px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky_mobile + main {
+  padding-top: 45px;
+}
+
+@include respond-above(sm) {
+  .full {
+    display: block;
+  }
+
+  .small,
+  .logo-img.small {
+    display: none;
+
+    &.sticky {
+      background-color: white;
+      display: block;
+      margin: 0;
+      padding-top: 5px;
+      position: fixed;
+      top: 0;
+      width: 200px;
+      z-index:1;
+    }
+  }
+
+  #title {
+    display: block;
+  }
+
+  .main_nav {
+    display: block;
+  }
+
+  .mobile_nav {
+    display: none;
+  }
+
+  .description {
+    flex: 1;
+    padding: 5px 15px 5px 0;
+
+    p {
+      padding-left: 15px;
+    }
+
+    &.sticky_padding {
+      padding-top: 55px;
+    }
+  }
+}

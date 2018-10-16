@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
     "behzad": "gulp build --root behzad",
+    "freeval": "gulp build --root freeval",
     "behzad-images": "gulp build-images --root behzad",
     "serve": "gulp serve"
   },

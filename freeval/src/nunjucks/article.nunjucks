@@ -1,0 +1,56 @@
+{% macro renderSection(section=training) %}
+
+<section id="{{section.id}}" class="flexible">
+  <h2 class="">{{section.title}}</h2>
+
+  <article class="seventy">
+    {% if section.description %}
+      <p>
+        {{section.description}}
+      </p>
+    {% endif %}
+    {% for article in section.articles %}
+      <article>
+        <h3>{{article.title}}</h3>
+        <p>
+           {{article.text}}
+           {% if article.list %}
+             <ul>
+               {% for item in article.list %}
+                 <li>{{item}}</li>
+               {% endfor %}
+             </ul>
+           {% endif %}
+        </p>
+        {% if article.link %}
+          <a class="article_link" href="{{article.link}}">Contact us to discuss {{article.title}}</a>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </article>
+
+  <aside class="thirty">
+    {% for resource in section.resources %}
+      <article class="sidebar">
+      {% if resource.image %}
+        <picture>
+          <source srcset="assets/{{resource.image.url}}.webp" type="image/webp">
+          <img class="lazy {{resource.image.class}}" data-src="assets/{{resource.image.url}}.png" alt="{{resource.image.alt}}"/>
+        </picture>
+      {% endif %}
+
+      {% if resource.title %}
+        <h3>{{resource.title}}</h3>
+      {% endif %}
+
+      {% if resource.links %}
+        {% for link in resource.links %}
+          <a href="{{link.url}}">{{link.text}}</a>
+        {% endfor %}
+      {% endif %}
+      </article>
+    {% endfor %}
+  </aside>
+</section>
+
+{% endmacro %}
