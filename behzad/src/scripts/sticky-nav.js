@@ -12,7 +12,7 @@ const title = document.getElementById("title")
 
 // Get the offset position of the navbar
 const sticky_title = title.offsetTop-12;
-const sticky_logo = logo.offsetTop-18;
+const sticky_logo = logo.offsetTop-4;
 const sticky_nav = navbar.offsetTop-78;
 const sticky_mobile = mobile.offsetTop;
 
@@ -27,16 +27,13 @@ function checkStick() {
   }
 
   if (window.pageYOffset >= sticky_logo) {
-    logo_small.classList.add("sticky")
-  } else {
-    logo_small.classList.remove("sticky")
-  }
-
-  if (window.pageYOffset >= sticky_nav) {
+    logo.classList.add("sticky")
     navbar.classList.add("sticky_nav")
   } else {
+    logo.classList.remove("sticky")
     navbar.classList.remove("sticky_nav")
   }
+
 
   if (sticky_mobile) {
     if (window.pageYOffset >= sticky_mobile) {

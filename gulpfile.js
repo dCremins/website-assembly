@@ -6,6 +6,7 @@ const concat = require('gulp-concat')
 const data = require('gulp-data')
 const del = require('del')
 const favicons = require("favicons").stream
+const gzip = require('gulp-gzip')
 const htmlmin = require('gulp-htmlmin')
 const imagemin = require('gulp-imagemin')
 const minimist = require('minimist')
@@ -23,7 +24,11 @@ const minify = composer(uglify, console)
 
 const knownOptions = {
   string: 'root',
-  default: { root: 'default'}
+  string: 'home',
+  default: {
+    root: 'default',
+    home: 'itredatalab.org'
+  }
 };
 
 const options = minimist(process.argv.slice(2), knownOptions)
@@ -33,8 +38,15 @@ gulp.task('serve', function(done) {
     server: {
       baseDir: options.root+'/build'
     }
+  }, function (err, bs) {
+    bs.addMiddleware("*", require('connect-gzip-static')(options.root+'/build'), {
+      override: true
+    })
   })
-  gulp.watch(options.root+'/src/**/*', gulp.series('quick-compile', 'reload'))
+  gulp.watch(options.root+'/src/scripts/**/*', gulp.series('javascript', 'reload'))
+  gulp.watch(options.root+'/src/styles/**/*', gulp.series('css', 'reload'))
+  gulp.watch(options.root+'/src/**/*.nunjucks', gulp.series('html', 'reload'))
+  gulp.watch(options.root+'/src/nunjucks/data.json', gulp.series('html', 'reload'))
   done();
 })
 
@@ -95,9 +107,11 @@ gulp.task('images', () => {
         rename: {extname: ".png"}
       }],
       'misc-*': [{
+        width: 500,
         format: 'webp',
         rename: {extname: ".webp"}
       }, {
+        width: 500,
         format: 'png',
         rename: {extname: ".png"}
       }],
@@ -122,7 +136,10 @@ gulp.task('favicon', () => {
     .pipe(favicons({
         version: 1.0,
         logging: false,
+        html: "index.html",
+        pipeHTML: true,
         replace: true,
+        url: 'http://'+options.home,
         icons: {
           android: false,              // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
           appleIcon: false,            // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }`
@@ -137,15 +154,8 @@ gulp.task('favicon', () => {
 		.pipe(gulp.dest(options.root+'/build/'))
 })
 
-/*
-gulp.task('html', () => {
-	return gulp.src(options.root+'/src/*.html')
-		.pipe(plumber())
-		.pipe(gulp.dest(options.root+'/build'))
-})
-*//
 gulp.task('html', function() {
-  return gulp.src(options.root+'/src/*.+(html|nunjucks)')
+  return gulp.src(options.root+'/src/*.nunjucks')
 		.pipe(plumber())
     .pipe(data(() => {
 			return require('./'+options.root+'/src/nunjucks/data.json')
@@ -161,8 +171,30 @@ gulp.task('html', function() {
     .pipe(gulp.dest(options.root+'/build'))
 })
 
-gulp.task('compile', gulp.series(()=>{return del(options.root+'/build')}, 'javascript', 'css', 'images', 'imageMin', 'favicon', 'html'))
-gulp.task('quick-compile', gulp.series('javascript', 'css', 'html'))
+gulp.task('gzip', () => {
+	return gulp.src([
+    options.root+'/build/*.js',
+    options.root+'/build/*.html',
+    options.root+'/build/css/*.css'
+  ])
+		.pipe(plumber())
+    .pipe(gzip())
+		.pipe(gulp.dest(options.root+'/build'))
+})
+
+gulp.task('compile', gulp.series(()=>{
+  return del(options.root+'/build')
+}, 'javascript', 'css', 'images', 'imageMin', 'favicon', 'html', 'gzip'))
+
+gulp.task('quick-compile', gulp.series(()=>{
+  return del([
+    options.root+'/build/css',
+    options.root+'/build/*.html',
+    options.root+'/build/*.js'
+  ])
+}, 'html', 'javascript', 'css'))
 
 gulp.task('build', gulp.series('compile', 'serve'))
-gulp.task('build-images', gulp.series(()=>{return del(options.root+'/build/assets')}, 'images'))
+gulp.task('build-images', gulp.series(()=>{
+  return del(options.root+'/build/assets')
+}, 'images'))

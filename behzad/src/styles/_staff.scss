@@ -50,14 +50,22 @@
   }
 
   .staff-image {
-    border-radius: 100px;
-    height: 150px;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 150px;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 100%;
+    padding: 0 20px;
+    text-align: center;
 
-    img {
-      width: 100%;
+    .icon {
+      border-radius: 100px;
+      height: 150px;
+      margin: 0 auto;
+      overflow: hidden;
+      width: 150px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 

@@ -11,6 +11,18 @@
   }
 }
 
+.video {
+  display: block;
+  height: 170px;
+  margin: 10px auto;
+  width: 300px;
+}
+
+.info {
+  height: auto;
+  width: 100%;
+}
+
 .article_link {
   background: $primary;
   border-radius: 15px;
@@ -20,6 +32,13 @@
   margin: 5px 0 10px;
   text-decoration: none;
   width: auto;
+}
+
+@include respond-above(xs) {
+  .video {
+    height: 225px;
+    width: 400px;
+  }
 }
 
 @include respond-above(sm) {
@@ -32,5 +51,14 @@
   .thirty {
     text-align: center;
     width: 30%;
+  }
+
+  .video {
+    height: 315px;
+    width: 560px;
+  }
+
+  .info {
+    //width: 100%;
   }
 }

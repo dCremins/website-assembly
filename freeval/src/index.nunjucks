@@ -1,4 +1,5 @@
 {% import 'article.nunjucks' as article %}
+{% import 'tools.nunjucks' as tools %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +15,11 @@
 
 {% include 'header.nunjucks' %}
   <main>
-    {{ article.renderSection(training) }}
-    {% include 'tools.nunjucks' %}
+    {{ article.renderSection(uses) }}
+    {{ tools.renderTools(downloads) }}
     {{ article.renderSection(faq) }}
+    {{ tools.renderTools(resources) }}
+    {{ article.renderSection(training) }}
   </main>
   {% include 'footer.nunjucks' %}
 </body>

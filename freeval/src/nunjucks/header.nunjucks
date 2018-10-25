@@ -2,12 +2,16 @@
   <div class="flexible header">
     <span class="sticky_bumper"></span>
     <section class="logo">
-      <a id="logo_holder" href="/home" alt="{{title}}" class="logo-img full">
-        <img alt="Icon Logo" src="assets/logo-icon.webp" alt="{{title}} Logo">
-        <img id="logo_big" alt="{{title}} Logo with Icon and Text" src="assets/logo-text.webp">
+      <a id="logo_holder" href="/" alt="{{title}}" class="logo-img full">
+        <picture id="logo" class="lozad" data-src="assets/logo-small.png" data-alt="{{title}} Icon Logo">
+          <source srcset="assets/logo-small.webp" type="image/webp">
+        </picture>
       </a>
-      <a id="logo_small" alt="Just Text Logo" href="/home" alt="{{title}} Icon Logo" id="logo" class="logo-img small">
-        <img src="assets/logo-text.webp" alt="{{title}} Icon Logo" >
+      <a href="/" class="logo-img small">
+        <picture class="logo_small lozad" data-alt="{{title}} Logo with Icon and Text" data-src="assets/logo-small.png">
+          <source srcset="assets/logo-small.webp" type="image/webp">
+        </picture>
+        <h1 class="small" >{{title}}</h1>
       </a>
     </section>
     <section id="header" class="description">

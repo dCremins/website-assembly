@@ -11,9 +11,8 @@
       <li class="staff">
         {% if staff.image !== '' %}
         <div class="staff-image">
-          <picture>
+          <picture class="lozad icon" data-src="assets/staff-{{staff.image}}.png" data-alt="{{staff.name}} Staff Photo">
             <source srcset="assets/staff-{{staff.image}}.webp" type="image/webp">
-            <img class="lazy" data-src="assets/staff-{{staff.image}}.png" alt="{{staff.name}} Staff Photo"/>
           </picture>
         </div>
         {% endif %}

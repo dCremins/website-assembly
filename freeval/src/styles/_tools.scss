@@ -43,4 +43,19 @@
       transform: translateY(-15px);
     }
   }
+
+  .boxes {
+    .info {
+      display: flex;
+      width: 100%;
+
+      p {
+        flex-grow: 1;
+      }
+
+      iframe {
+        padding: 0 20px;
+      }
+    }
+  }
 }
