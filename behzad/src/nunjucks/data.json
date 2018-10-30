@@ -25,50 +25,58 @@
       "label": "Location",
       "id": "location"
     }
-  ],
-  "tools": [
-    {
-      "icon": "pst",
-      "title": "Peak Spreading Tool",
-      "description": "This tool provides a analytical approach based on NCHRP 765 for analysis of demand peaks",
-      "link": "http://pst.itredatalab.org/"
-    },{
-      "icon": "traffic",
-      "title": "Interactive Traffic Violation Video Archive",
-      "description": "this tool provides a central resource to search for a variaty of traffic violations video footage in Wake county",
-      "link": "http://itredatalab.org/NCDOT_TVV/index.php"
-    }, {
-      "icon": "bike",
-      "title": "BiPed Analytics",
-      "description": "The online BiPed Analytics tool provides a comprehensive set of facilities to collect pedestrian and bicycle counts along with validation, applying correction factors, and converting them to TMG format",
-      "link": "http://itredatalab.org/"
-    }, {
-      "icon": "ramp",
-      "title": "On-Ramp Signal's Evaluation Tool",
-      "description": "This tool is designed to help NCDOT and its stakeholders to analyze the operation of on-ramp signals in NC",
-      "link": "http://rm.itredatalab.org/"
-    }, {
-      "icon": "intersection",
-      "title": "CostVal",
-      "description": "CostVal or Intersection lifecycle analysis tool provides facilities to evaluate life cycle costs for different intersection alternatives.",
-      "link": "/downloads/LCCA.Jan2018.zip"
-    }, {
-      "icon": "signal",
-      "title": "Signal Prioritization (SPM)",
-      "description": "The NCDOT's cloud based signal prioritization tool provide facilities to NCDOT staff and engineers to prioritize signal timing plans change.",
-      "link": "http://spm.itredatalab.org/"
-    }, {
-      "icon": "freeval",
-      "title": "FREEVAL",
-      "description": "FREEVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
-      "link": "http://freeval.org/"
-    }, {
-      "icon": "streetval",
-      "title": "STREETVAL",
-      "description": "STREETVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
-      "link": "http://freeval.org/"
-    }
-  ],
+  ],"resources": {
+    "id": "tools",
+    "title": "",
+    "description": "",
+    "video": {
+      "title":"",
+      "url":""
+    },
+    "tools": [
+      {
+        "icon": "pst",
+        "title": "Peak Spreading Tool",
+        "description": "This tool provides a analytical approach based on NCHRP 765 for analysis of demand peaks",
+        "link": "http://pst.itredatalab.org/"
+      },{
+        "icon": "traffic",
+        "title": "Interactive Traffic Violation Video Archive",
+        "description": "this tool provides a central resource to search for a variaty of traffic violations video footage in Wake county",
+        "link": "http://itredatalab.org/NCDOT_TVV/index.php"
+      }, {
+        "icon": "bike",
+        "title": "BiPed Analytics",
+        "description": "The online BiPed Analytics tool provides a comprehensive set of facilities to collect pedestrian and bicycle counts along with validation, applying correction factors, and converting them to TMG format",
+        "link": "http://itredatalab.org/"
+      }, {
+        "icon": "ramp",
+        "title": "On-Ramp Signal's Evaluation Tool",
+        "description": "This tool is designed to help NCDOT and its stakeholders to analyze the operation of on-ramp signals in NC",
+        "link": "http://rm.itredatalab.org/"
+      }, {
+        "icon": "intersection",
+        "title": "CostVal",
+        "description": "CostVal or Intersection lifecycle analysis tool provides facilities to evaluate life cycle costs for different intersection alternatives.",
+        "link": "/downloads/LCCA.Jan2018.zip"
+      }, {
+        "icon": "signal",
+        "title": "Signal Prioritization (SPM)",
+        "description": "The NCDOT's cloud based signal prioritization tool provide facilities to NCDOT staff and engineers to prioritize signal timing plans change.",
+        "link": "http://spm.itredatalab.org/"
+      }, {
+        "icon": "freeval",
+        "title": "FREEVAL",
+        "description": "FREEVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
+        "link": "http://freeval.org/"
+      }, {
+        "icon": "streetval",
+        "title": "STREETVAL",
+        "description": "STREETVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
+        "link": "http://freeval.org/"
+      }
+    ]
+  },
   "staffGroup": [
     {
       "name": "ITRE",

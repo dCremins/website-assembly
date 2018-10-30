@@ -1,3 +1,5 @@
+{% import 'tools.nunjucks' as tools %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,8 @@
 
 {% include 'header.nunjucks' %}
   <main>
-    {% include 'tools.nunjucks' %}
+
+    {{ tools.renderTools(resources) }}
 
     <section id="whatwedo">
       <h2>What We Do</h2>

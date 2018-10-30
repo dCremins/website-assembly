@@ -40,6 +40,7 @@
         <article class="sidebar">
         {% if resource.image %}
           <picture class="lozad {{resource.image.class}}" data-iesrc="assets/{{resource.image.url}}.png" data-alt="{{resource.image.alt}}">
+            <source srcset="assets/{{resource.image.url}}.png" type="image/png">
             <source srcset="assets/{{resource.image.url}}.webp" type="image/webp">
           </picture>
         {% endif %}

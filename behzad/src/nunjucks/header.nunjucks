@@ -1,18 +1,20 @@
-
 <header id="home">
   <div class="flexible header">
     <span class="sticky_bumper"></span>
     <section class="logo">
       <a id="logo_holder" href="/" alt="{{title}}" class="logo-img full">
-        <picture class="lozad" data-src="assets/logo-icon.png" data-alt="{{title}} Icon Logo">
+        <picture class="lozad" data-iesrc="assets/logo-icon.png" data-alt="{{title}} Icon Logo">
+          <source srcset="assets/logo-icon.png" type="image/png">
           <source srcset="assets/logo-icon.webp" type="image/webp">
         </picture>
-        <picture class="lozad" id="logo_big" data-alt="Datalab Logo with Icon and Text" data-src="assets/logo-text.png" >
+        <picture id="logo_big" class="lozad" data-iesrc="assets/logo-text.png" data-alt="{{title}} Icon Logo">
+          <source srcset="assets/logo-text.png" type="image/png">
           <source srcset="assets/logo-text.webp" type="image/webp">
         </picture>
       </a>
       <a href="/" class="logo-img small">
-        <picture class="logo_small lozad" data-alt="{{title}} Logo with Icon and Text" data-src="assets/logo-small.png">
+        <picture class="logo_small lozad" data-alt="{{title}} Logo with Icon and Text" data-iesrc="assets/logo-small.png">
+          <source srcset="assets/logo-small.png" type="image/png">
           <source srcset="assets/logo-small.webp" type="image/webp">
         </picture>
         <h1 class="small" >{{title}}</h1>
@@ -20,11 +22,7 @@
     </section>
     <section id="header" class="description">
       <h1 id="title">{{title}}</h1>
-      <p class="full"><strong>{{bolded}}</strong> {{description}}
-        {% if header_contact %}
-          {{header_contact}} <a href="mailto:{{contact}}">{{contact_label}} ({{contact}})</a>
-        {% endif %}
-      </p>
+      <p class="full"><strong>{{bolded}}</strong> {{description}}</p>
     </section>
   </div>
 </header>
@@ -32,7 +30,7 @@
 <section id="navbar" class="main_nav">
   <nav class="flexible">
     {% for item in nav %}
-    <a id="main_{{item.id}}" href="/home/#{{item.id}}">{{item.label}}</a>
+    <a id="main_{{item.id}}" href="/#{{item.id}}">{{item.label}}</a>
     {% endfor %}
   </nav>
 </section>
@@ -46,7 +44,7 @@
 </button>
   <nav id="mobile-navigation" class="mobile">
     {% for item in nav %}
-    <a id="mobile_{{item.id}}" href="/home/#{{item.id}}">{{item.label}}</a>
+    <a id="mobile_{{item.id}}" href="/#{{item.id}}">{{item.label}}</a>
     {% endfor %}
   </nav>
 </section>

@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 
+const autoprefixer = require('gulp-autoprefixer')
 const browserSync = require('browser-sync').create()
 const cleanCSS = require('gulp-clean-css')
 const concat = require('gulp-concat')
@@ -50,7 +51,7 @@ gulp.task('serve', function(done) {
   done();
 })
 
-gulp.task('reload', function(done) {
+gulp.task('reload', (done)=> {
   browserSync.reload()
   done();
 })
@@ -65,17 +66,26 @@ gulp.task('javascript', () => {
 		.pipe(gulp.dest(options.root+'/build'))
 })
 
-gulp.task('css', function() {
+gulp.task('sass', ()=> {
   return gulp.src(options.root+'/src/styles/main.scss')
 	  .pipe(plumber())
 		.pipe(sourcemaps.init())
 	  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(sourcemaps.write())
-		.pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(rename('main.css'))
+		.pipe(sourcemaps.write())
     .pipe(gulp.dest(options.root+'/build/css'))
-    .pipe(browserSync.stream())
 })
+
+gulp.task('css', gulp.series('sass', ()=>{
+  return gulp.src(options.root+'/build/css/main.css')
+	  .pipe(plumber())
+		.pipe(sourcemaps.init())
+    .pipe(autoprefixer())
+		.pipe(cleanCSS({compatibility: 'ie7'}))
+		.pipe(sourcemaps.write())
+    .pipe(gulp.dest(options.root+'/build/css'))
+}))
+
 
 gulp.task('images', () => {
 	return gulp.src(options.root+'/src/assets/*.{png,jpg,jpeg,gif}')
@@ -154,7 +164,7 @@ gulp.task('favicon', () => {
 		.pipe(gulp.dest(options.root+'/build/'))
 })
 
-gulp.task('html', function() {
+gulp.task('html', ()=> {
   return gulp.src(options.root+'/src/*.nunjucks')
 		.pipe(plumber())
     .pipe(data(() => {

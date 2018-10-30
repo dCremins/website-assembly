@@ -21,7 +21,8 @@
   {% for tool in section.tools %}
     <article class="tool">
       {% if tool.icon %}
-        <picture class="lozad icon" data-src="assets/icon-{{tool.icon}}.png" data-alt="{{tool.title}} Logo Icon">
+        <picture class="lozad icon" data-iesrc="assets/icon-{{tool.icon}}.png" data-alt="{{tool.title}} Logo Icon">
+          <source srcset="assets/icon-{{tool.icon}}.png" type="image/png">
           <source srcset="assets/icon-{{tool.icon}}.webp" type="image/webp">
         </picture>
       {% endif %}

@@ -1,17 +1,26 @@
-let act_con = 'itre'
+var act_con = 'itre';
 
-const itre = document.getElementById('tab_1')
-const civil = document.getElementById('tab_2')
-const former = document.getElementById('tab_3')
+var itre = document.getElementById('tab_1');
+var civil = document.getElementById('tab_2');
+var former = document.getElementById('tab_3');
 
-const itre_staff = document.getElementById('itre_staff')
-const civil_staff = document.getElementById('civil_staff')
-const former_staff = document.getElementById('former_staff')
+var itre_staff = document.getElementById('itre_staff');
+var civil_staff = document.getElementById('civil_staff');
+var former_staff = document.getElementById('former_staff');
 
 
-itre ? itre.addEventListener('click', () => toggleTabContent('itre') ) : ''
-civil ? civil.addEventListener('click', () => toggleTabContent('civil') ) : ''
-former ? former.addEventListener('click', () => toggleTabContent('former') ) : ''
+if (itre) {
+  itre.addEventListener('click', function() { toggleTabContent('itre') } )
+}
+
+if (civil) {
+  civil.addEventListener('click', function() { toggleTabContent('civil') } )
+}
+
+if (former) {
+  former.addEventListener('click', function() { toggleTabContent('former') } )
+}
+
 
 function toggleTabContent(clicked) {
   if (clicked === act_con) {
@@ -50,6 +59,6 @@ function toggleTabContent(clicked) {
         break
     }
   }
-  act_con = clicked
-  return
+  act_con = clicked;
+  return;
 }

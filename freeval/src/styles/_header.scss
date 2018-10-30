@@ -7,11 +7,11 @@
   .sticky_bumper,
   .description {
     flex-grow: 1;
-    z-index: 1;
   }
 
   .description {
     display: none;
+    z-index: 2;
   }
 
   a .small {
@@ -147,7 +147,7 @@
   position: fixed;
   top: 53px;
   width: 100%;
-  z-index:1;
+  z-index:3;
 }
 
 .sticky_nav + main {
@@ -164,6 +164,7 @@
 
 .sticky_bumper {
   display: none;
+  z-index: 1;
 }
 
 .sticky_mobile + main {
@@ -231,6 +232,7 @@
       display: block;
       flex: none;
       width: 200px;
+      z-index: 2;
     }
 
     .description {
