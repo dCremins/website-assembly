@@ -1,0 +1,5 @@
+include signals/signals.min.js
+include signals/signals.dev.js
+include signals/metadata.json
+include signals/package.json
+include README.md
