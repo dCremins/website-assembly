@@ -27,6 +27,13 @@
 .logo-img {
   height: auto;
   width: 200px;
+  transition: all .25s;
+
+  .header-icon {
+    margin-left: 0;
+    max-width: 200px;
+    transition: max-width .5s, margin-left .5s;
+  }
 
   img {
     margin: 0;
@@ -182,15 +189,26 @@
     display: none;
   }
 
-  .logo-img .sticky {
-    background-color: white;
-    display: block;
-    margin: 0;
-    padding-top: 5px;
-    position: fixed;
-    top: 0;
-    width: 200px;
-    z-index:1;
+  .logo-img {
+    .sticky_little {
+      max-width: 45px;
+    }
+    .sticky_fixed {
+      position: fixed;
+      padding-top: 3px;
+      top: 0;
+    }
+    .sticky {
+      background-color: white;
+      display: block;
+      margin: 0;
+      margin-left: 50px;
+      padding-top: 13px;
+      position: fixed;
+      top: 0;
+      max-width: 150px;
+      z-index:1;
+    }
   }
 
   #title {

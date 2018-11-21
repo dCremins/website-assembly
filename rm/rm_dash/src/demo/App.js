@@ -1,7 +1,7 @@
 /* eslint no-magic-numbers: 0 */
 import React, {Component} from 'react';
 
-import signals from '../lib';
+import Test from '../lib'
 
 class App extends Component {
 
@@ -10,20 +10,12 @@ class App extends Component {
         this.state = {
             value: ''
         };
-        this.setProps = this.setProps.bind(this);
-    }
-
-    setProps(newProps) {
-        this.setState(newProps);
     }
 
     render() {
         return (
             <div>
-                <signals
-                    setProps={this.setProps}
-                    {...this.state}
-                />
+              <Test value={this.state.value} />
             </div>
         )
     }
