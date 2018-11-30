@@ -1,0 +1,39 @@
+{
+  "title":"Driver and Transportation Analytics Lab",
+  "author": "Behzad Aghdashi",
+  "bolded": "D.a.T.A. Lab at ITRE",
+  "description": "provides analytical facilities to analyze big data, visualization, and predictions in transportation industry. This page serves as a central point to connect to different tools developed in ITRE's DATA Lab. For all tools developed in DaTA lab, a link is placed in this screen. Different tools will have a different authentication method. If you need access to these tools, please contact Behzad Aghdashi at",
+  "header_contact": "If you need access to these tools, please contact",
+  "contact": "saghdas@ncsu.edu",
+  "contact_label": "Behzad Aghdashi",
+  "address1": "909 Capability Dr, Suite 3600",
+  "address2": "Raleigh, NC, 27606",
+  "nav": [
+    {
+      "label": "Home",
+      "id": "home"
+    }, {
+      "label": "Tools",
+      "id": "tools"
+    }, {
+      "label": "What We Do",
+      "id": "whatwedo"
+    }, {
+      "label": "Who We Are",
+      "id": "whoweare"
+    }, {
+      "label": "Location",
+      "id": "location"
+    }
+  ],
+  "dash": {
+    "title":"",
+    "description":"",
+    "components":[
+      "route",
+      "source",
+      "after",
+      "before"
+    ]
+  }
+}

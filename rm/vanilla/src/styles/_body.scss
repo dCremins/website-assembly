@@ -1,0 +1,105 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: $mt0;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+picture {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+
+  &.flexible {
+    align-items: center;
+  }
+
+  section {
+    padding: 25px 0 0;
+  }
+}
+
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+p,
+li {
+  font-weight: lighter;
+  margin: 0.5em 0;
+}
+
+a {
+  color: $primary;
+
+  &:visited {
+    color: #cc0000;
+  }
+}
+
+h1 {
+  font-size: $mt2;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+h2 {
+  color: $primary;
+  font-size: $mt1;
+  font-weight: bold;
+  margin: 0.5em 0;
+  width: 100%;
+}
+
+h3 {
+  font-size: $mt0;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+}
+
+.privacy {
+  h1 {
+    margin: 1em 0;
+  }
+}
+
+@include respond-above(sm) {
+  main {
+    flex-grow: 1;
+
+    section {
+      padding: 95px 0 0;
+    }
+  }
+
+  main,
+  header,
+  nav {
+    margin: auto;
+    max-width: 1500px;
+    width: 80%;
+  }
+
+  body {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}

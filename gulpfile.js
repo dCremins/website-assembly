@@ -14,6 +14,7 @@ const minimist = require('minimist')
 const nunjucksRender = require('gulp-nunjucks-render')
 const optimizejs = require('gulp-optimize-js')
 const plumber = require('gulp-plumber')
+const prettyHtml = require('gulp-pretty-html')
 const rename = require('gulp-rename')
 const responsive = require('gulp-responsive')
 const sass = require('gulp-sass')
@@ -173,11 +174,12 @@ gulp.task('html', ()=> {
     .pipe(nunjucksRender({
       path: [options.root+'/src/nunjucks/']
     }))
-    .pipe(htmlmin(
-      {
-        collapseWhitespace: true,
-        removeComments: true
-      }))
+  //  .pipe(htmlmin(
+  //    {
+  //      collapseWhitespace: false,
+  //      removeComments: true
+  //    }))
+    .pipe(prettyHtml())
     .pipe(gulp.dest(options.root+'/build'))
 })
 

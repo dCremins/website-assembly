@@ -9,6 +9,7 @@
     "freeval": "gulp build --root freeval",
     "behzad-production": "gulp compile --root behzad --home itredatalab.org/home",
     "freeval-production": "gulp compile --root freeval --home freeval.org",
+    "vanilla": "gulp compile --root rm/vanilla && python rm/vanilla/app.py",
     "serve": "gulp serve"
   },
   "author": "Devin Cremins",
