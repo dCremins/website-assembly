@@ -22,7 +22,12 @@
     </section>
     <section id="header" class="description">
       <h1 id="title">{{title}}</h1>
-      <p class="full"><strong>{{bolded}}</strong> {{description}}</p>
+      <p class="full"><strong>{{bolded}}</strong> {{description}}
+        {% if contact %}
+        {{header_contact}}
+        <a href="mailto:{{contact}}">{{contact_label}}</a>
+        {% endif %}
+      </p>
     </section>
   </div>
 </header>

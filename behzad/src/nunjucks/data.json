@@ -2,7 +2,7 @@
   "title":"Driver and Transportation Analytics Lab",
   "author": "Behzad Aghdashi",
   "bolded": "D.a.T.A. Lab at ITRE",
-  "description": "provides analytical facilities to analyze big data, visualization, and predictions in transportation industry. This page serves as a central point to connect to different tools developed in ITRE's DATA Lab. For all tools developed in DaTA lab, a link is placed in this screen. Different tools will have a different authentication method. If you need access to these tools, please contact Behzad Aghdashi at",
+  "description": "provides analytical facilities and support to analyze big data, visualization, and predictions in transportation industry. This page serves as a central point to connect to different tools developed in this laboratory. For all the tools developed in DaTA lab, a link is placed in this screen. Different tools have different authentication methods.",
   "header_contact": "If you need access to these tools, please contact",
   "contact": "saghdas@ncsu.edu",
   "contact_label": "Behzad Aghdashi",
@@ -45,13 +45,13 @@
         "title": "Interactive Traffic Violation Video Archive",
         "description": "this tool provides a central resource to search for a variaty of traffic violations video footage in Wake county",
         "button": "Visit Interactive Traffic Violation Video Archive",
-        "link": "http://itredatalab.org/NCDOT_TVV/index.php"
+        "link": "http://tvv.itredatalab.org/"
       }, {
         "icon": "bike",
         "title": "BikePed Analytics",
         "description": "The online BiPed Analytics tool provides a comprehensive set of facilities to collect pedestrian and bicycle counts along with validation, applying correction factors, and converting them to TMG format",
         "button": "Visit BikePed Analytics",
-        "link": "http://itredatalab.org/"
+        "link": "http://biped.itredatalab.org/"
       }, {
         "icon": "ramp",
         "title": "On-Ramp Signal's Evaluation Tool",
@@ -59,11 +59,17 @@
         "button": "Visit On-Ramp Signal's Evaluation Tool",
         "link": "http://rm.itredatalab.org/"
       }, {
+        "icon": "icm",
+        "title": "Integrated Corridor Management",
+        "description": "Integrated Corridor Management tool provides facilities to evaluate traffic operation on corridors managed by Active Traffic Management (ATM) strategies.",
+        "button": "Visit ICM Tool",
+        "link": "http://icm.itredatalab.org"
+      },{
         "icon": "intersection",
         "title": "CostVal",
         "description": "CostVal or Intersection lifecycle analysis tool provides facilities to evaluate life cycle costs for different intersection alternatives.",
         "button": "Visit CostVal",
-        "link": "/downloads/LCCA.Jan2018.zip"
+        "link": "http://costval.itredatalab.org"
       }, {
         "icon": "signal",
         "title": "Signal Prioritization (SPM)",
@@ -81,7 +87,13 @@
         "title": "STREETVAL",
         "description": "STREETVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
         "button": "Visit STREETVAL",
-        "link": "http://freeval.org/"
+        "link": "http://streetval.itredatalab.org/"
+      }, {
+        "icon": "",
+        "title": "School Location Optimization",
+        "description": "SLO is a cloud based planning level optimization tool for locating the optimal locations to build new schools.",
+        "button": "Visit SLO",
+        "link": "http://slo.itredatalab.org/"
       }
     ]
   },
@@ -104,13 +116,29 @@
     			"title": "Web Specialist",
     			"image": "Cremins"
     		}, {
+    			"name": "Andy Pottkotter",
+    			"title": "Graphic Design Specialist",
+    			"image": "Pottkotter"
+    		},{
     			"name": "Blythe Carter",
     			"title": "Research Assistant at ITRE",
     			"image": "Carter"
     		}, {
-    			"name": "Shams Tanvir",
+    			"name": "Shams Tanvi",
     			"title": "Research Associate at ITRE",
     			"image": "Tanvir"
+    		}, {
+    			"name": "Heyt Patel",
+    			"title": "Software Developer",
+    			"image": "Heyt"
+    		}, {
+    			"name": "Prakshat Shah",
+    			"title": "Software Developer",
+    			"image": "Prakshat"
+    		}, {
+    			"name": "Aditya Shah",
+    			"title": "Software Developer",
+    			"image": "Aditya"
     		}
       ]
     }, {
@@ -135,11 +163,7 @@
       "tab": "3",
       "id": "former_staff",
       "members": [
-        {
-    			"name": "Heyt Patel",
-    			"title": "Undergraduate Student in Computer Science",
-    			"image": ""
-    		}, {
+       {
     			"name": "J. Lake Trask",
     			"title": "Transportation Analyst at Kittelson and Associates Inc.",
     			"image": ""
