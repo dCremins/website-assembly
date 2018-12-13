@@ -1,0 +1,13 @@
+{% set body_class = "work" %}
+{% extends "_layout.nunjucks" %}
+
+
+{% block content %}
+{{ title }}
+{{ body | safe }}
+<section>
+  {% for tag in tags %}
+  <a href="/{{tag | replace(" ", "_")}}">{{tag | replace("_", " ") | capitalize}}</a>
+  {% endfor %}
+</section>
+{% endblock %}

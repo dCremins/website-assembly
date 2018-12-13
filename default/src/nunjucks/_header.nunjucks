@@ -1,0 +1,17 @@
+{% macro renderHeader(nav=['home'], body_class='home') %}
+<header class="header">
+  <nav>
+    <ul>
+      {% for item in nav %}
+        {% if body_class === item %}
+          <li class='current'>
+        {% else %}
+          <li>
+        {% endif %}
+          {{item | replace("_", " ") | capitalize}}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+{% endmacro %}

@@ -1,0 +1,29 @@
+{
+  "title": "",
+  "database": true,
+  "database_options": {
+
+  },
+  "images": true,
+  "components": [
+    {
+      "type": "select",
+      "title": "Route #:",
+      "id": "route",
+      "class": "",
+      "options": "route",
+      "value": ""
+    }, {
+      "type": "date",
+      "id": "",
+      "class": "",
+      "orientation": [],
+      "start": "",
+      "end": ""
+    }, {
+      "type": "graph",
+      "id": "",
+      "class": ""
+    }
+  ]
+}

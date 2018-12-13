@@ -1,0 +1,8 @@
+{% set body_class = "home" %}
+{% extends "_layout.nunjucks" %}
+
+
+{% block content %}
+Hello world!
+{{body_class}}
+{% endblock %}
