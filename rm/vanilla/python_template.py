@@ -45,46 +45,59 @@ html_layout = f.read()
 f.close()
 
 # If this tool needs a database, send the options from data to our SQL function
-if data.database:
-    database_data = python_database.connect(data.database_options)
-else:
+try:
+    assert(data["database"])
+    database_data = python_database.connect(data["database_options"])
+except:
+    print('No database connection was made for this tool.')
     database_data = {}
 
 # Load images
-if data.images:
+try:
+    assert(data["images"])
     images = os.listdir( './assets' )
     for image in images:
         image_data[image] = base64.b64encode(open(image, 'rb').read())
-else:
+except:
+    print('No images were loaded for this tool.')
     image_data = []
+
+
 
 # Load Components
 injection_dict = {}
-for component in data.components:
-    if component.type == 'select':
-        if database_data[component.options]:
-            options = database_data[component.options]
+for component in data["components"]:
+    if component["type"] == 'select':
+        hold = component["options"]
+        if database_data[hold]:
+            options = database_data[hold]
         else:
-            options.component.options
-        injection_dict[component.id] = select(component, options)
+            options = hold
+        injection_dict[component["id"]] = select(component, options)
 
 # Callback generator for Graphs
 def create_callback(output):
-     def callback(input):
+     def rm_callback(route, source, after_start, after_end, before_start, before_end):
         # ....
+
+        dataframeX = pandas.read_sql()
+        dataframeY = pandas.read_sql()
         return {
             'data': [],
             'layout': [],
             'legend': []
         }
-    return callback
+    if output["callback"] == 'rm':
+        return rm_callback
+    else:
+        return
 
 # Load Graphs
-for graph in data.graph:
-    outputs = Output(graph.output.id, graph.output.property)
+for graph in data["graph"]:
+    outputs = Output(graph["output"]["id"], graph["output"]["property"])
     inputs = []
-    for input in graph.input:
-        input.append(Input(input.id, input.property))
+    for input in graph["input"]:
+        input.append(Input(input["id"], input["property"]))
 
     @app.callback(outputs, inputs)(create_callback(outputs))
 

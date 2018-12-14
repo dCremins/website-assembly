@@ -1,26 +1,14 @@
-{% macro dashComponent(info=dash) %}
+{% macro dashComponent(components={}) %}
 
-  <div>
+  {% for info in components %}
+  <div class="component">
     {% if info.title %}
-      <h1>{{info.title}}</h1>
+      <h2>{{info.title}}</h2>
     {% endif %}
+    <template id="{{info.id}}" class="{{info.class}}">
 
-    {% if info.description %}
-      <p>{{info.description}}</p>
-    {% endif %}
-    <div class="flexible">
-      <div class="flexible">
-        {% for component in info.components %}
-          {% if component.subcomponent %}
-            {% for sub in component.subcomponent %}
-              <template id={{sub}}></template>
-            {% endfor %}
-          {% else %}
-            <template id={{component}}></template>
-          {% endif %}
-          </div>
-        {% endfor %}
-    </div>
+    </template>
   </div>
+  {% endfor %}
 
 {% endmacro %}

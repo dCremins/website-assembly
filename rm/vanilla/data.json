@@ -2,7 +2,17 @@
   "title": "",
   "database": true,
   "database_options": {
-
+    "host": "152.14.29.120",
+    "user": "rmdash",
+    "password": "dashdash",
+    "database": "rmdash",
+    "queries": [
+      {
+        "name": "after",
+        "search": "SELECT distinct `Date_1` from rt_test",
+        "column": "Date_1"
+      }
+    ]
   },
   "images": true,
   "components": [
@@ -15,14 +25,15 @@
       "value": ""
     }, {
       "type": "date",
-      "id": "",
+      "title": "After:",
+      "id": "date_select",
       "class": "",
-      "orientation": [],
-      "start": "",
-      "end": ""
+      "orientation": "horizontal",
+      "start": "months=+1",
+      "end": "months=+0"
     }, {
       "type": "graph",
-      "id": "",
+      "id": "graph",
       "class": ""
     }
   ]

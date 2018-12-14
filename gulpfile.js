@@ -14,9 +14,11 @@ gulp.registry(hub);
 const knownOptions = {
   string: 'root',
   string: 'home',
+  string: 'style',
   default: {
     root: 'default',
-    home: 'itredatalab.org'
+    home: 'itredatalab.org',
+    style: 'static'
   }
 }
 const options = minimist(process.argv.slice(2), knownOptions)
@@ -24,11 +26,26 @@ const options = minimist(process.argv.slice(2), knownOptions)
 const tasks = {
   style: true,
   script: true,
-  blog: true,
+  blog: false,
+  html: false,
+  python: false,
   images: true,
   favicon: true,
   gzip: false
 }
+
+switch(options.style) {
+  case 'blog':
+    tasks.blog = true
+    break
+  case 'python':
+    tasks.python = true
+    break
+  default:
+    tasks.html = true
+    break
+}
+
 gulp.task('skip', (done) => {
   done()
 })
@@ -51,7 +68,9 @@ gulp.task('compile', gulp.series(
   tasks.images ? 'images' : 'skip',
   tasks.images ? 'imageMin' : 'skip',
   tasks.favicon ? 'favicon' : 'skip',
-  tasks.blog ? 'markdown' : 'html',
+  tasks.blog ? 'markdown' : 'skip',
+  tasks.html ? 'html' : 'skip',
+  tasks.python ? 'html-python' : 'skip',
   tasks.gzip ? 'gzip' : 'skip'
 ))
 

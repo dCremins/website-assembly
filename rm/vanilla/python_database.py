@@ -1,4 +1,5 @@
-import MySQLdb
+
+import mysql.connector as MySQLdb
 import pandas
 
 # Assumed appearance of options:
@@ -19,13 +20,18 @@ import pandas
 
 def connect(options):
     # connect to the database
-    conn = MySQLdb.connect(host=options.host, user=options.user, passwd=options.password, db=options.database)
+    conn = MySQLdb.connect(
+        host=options["host"],
+        user=options["user"],
+        passwd=options["password"],
+        db=options["database"]
+    )
     # define our dictionary to return
     data = {}
     # read our querys into DataFrames
-    for query in options.queries:
-        result = pandas.read_sql(query.search, con=conn)
-        data[query.name] = result[query.column]
+    for query in options["queries"]:
+        result = pandas.read_sql(query["search"], con=conn)
+        data[query["name"]] = result[query["column"]]
 
     conn.close()
 

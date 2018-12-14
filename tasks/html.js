@@ -10,6 +10,8 @@ const prettyHtml = require('gulp-pretty-html')
 const rename = require('gulp-rename')
 const minimist = require('minimist')
 
+const fs = require('fs')
+
 const knownOptions = {
   string: 'root',
   string: 'home',
@@ -24,7 +26,7 @@ gulp.task('html', ()=> {
   return gulp.src(options.root+'/src/*.nunjucks')
 		.pipe(plumber())
     .pipe(data(() => {
-			return require('./'+options.root+'/src/nunjucks/data.json')
+			return JSON.parse(fs.readFileSync(options.root+'/src/nunjucks/data.json'))
 		}))
     .pipe(nunjucksRender({
       path: [options.root+'/src/nunjucks/']
@@ -37,11 +39,11 @@ gulp.task('html', ()=> {
     .pipe(gulp.dest(options.root+'/build'))
 })
 
-gulp.task('html-pretty', ()=> {
+gulp.task('html-python', ()=> {
   return gulp.src(options.root+'/src/*.nunjucks')
 		.pipe(plumber())
     .pipe(data(() => {
-			return require('./'+options.root+'/src/nunjucks/data.json')
+			return JSON.parse(fs.readFileSync(options.root+'/data.json'))
 		}))
     .pipe(nunjucksRender({
       path: [options.root+'/src/nunjucks/']
