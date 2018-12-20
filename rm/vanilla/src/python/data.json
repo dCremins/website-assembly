@@ -1,0 +1,354 @@
+{
+  "title": "I-540WB OnRamp Signal Evaluation Dashboard",
+  "author": "Behzad Aghdashi",
+  "bolded": "",
+  "description": "This dashboard is designed to enable NCDOT to evaluate the impact of on-ramp signals on I-540WB in Raleigh, NC. Travel time data source for this dashboard is HERE.com and the volume data is collected using NCDOT fixed sensors.",
+  "header_contact": "For any questions or bug fixes related to this tool, please contact ",
+  "contact": "support@itredatalab.org",
+  "contact_label": "support@itredatalab.org",
+  "address1": "909 Capability Dr, Suite 3600",
+  "address2": "Raleigh, NC, 27606",
+  "root": "",
+  "css":"css/main.css",
+  "queries": [
+    {
+      "name": "after",
+      "search": "SELECT distinct `Date_1` from rt_test",
+      "column": "Date_1"
+    }, {
+      "name": "before",
+      "search": "SELECT distinct `Date_1` from rt_test",
+      "column": "Date_1"
+    }, {
+      "name": "route",
+      "search": "SELECT * from rt_desc;",
+      "column": "rt_no",
+      "modifier": " - ",
+      "column2": "rt_name"
+    }, {
+      "name": "source",
+      "search": "SELECT distinct source from tb_tt;",
+      "column": "source"
+    }
+  ],
+  "components": [
+    {
+      "type": "select",
+      "title": "Route #:",
+      "id": "route",
+      "class": "",
+      "options": "route",
+      "value": "1",
+      "value_split": "first"
+    }, {
+      "type": "select",
+      "title": "Data Select:",
+      "id": "source",
+      "class": "",
+      "options": "source",
+      "value": "HERE",
+      "value_split": ""
+    }, {
+      "type": "date",
+      "title": "After Period:",
+      "id": "date_after",
+      "class": "",
+      "orientation": "horizontal",
+      "start": 1,
+      "end": 0
+    }, {
+      "type": "date",
+      "title": "Before Period:",
+      "id": "date_before",
+      "class": "",
+      "orientation": "horizontal",
+      "start": 13,
+      "end": 12
+    }
+  ],
+  "graph": [
+    {
+      "output": {
+        "id":"graph_all",
+        "class": "large_graph",
+        "property":"figure",
+        "callback": "yes"
+      },
+      "input":[{
+          "id":"route",
+          "variable": "route",
+          "property":"value"
+        }, {
+          "id":"source",
+          "variable": "source",
+          "property":"value"
+        }, {
+          "id":"date_after",
+          "variable": "after_start",
+          "property":"start_date"
+        }, {
+          "id":"date_after",
+          "variable": "after_end",
+          "property":"end_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_start",
+          "property":"start_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_end",
+          "property":"end_date"
+        }
+      ],
+      "query": [
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{after_start}' AND rt_test.Date_1 <= '{after_end}' AND rt_test.rt_number={route} AND rt_test.source='{source}' AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;",
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{before_start}' AND rt_test.Date_1 <= '{before_end}' AND rt_test.rt_number={route} AND rt_test.source='{source}' AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;"
+      ],
+      "layout": {
+        "title":"Average Travel Time (Mins) in Selected Period for All Weekdays",
+        "axis":"Travel Time (Minutes)",
+        "data1":"Selected Date",
+        "data2":"Baseline",
+        "x":"time_2",
+        "y":"avgtt",
+        "type":"date",
+        "format":"%H:%M"
+      }
+    }, {
+      "output": {
+        "id":"graph_mon",
+        "class": "small_graph",
+        "property":"figure",
+        "callback": "yes"
+      },
+      "input":[{
+          "id":"route",
+          "variable": "route",
+          "property":"value"
+        }, {
+          "id":"source",
+          "variable": "source",
+          "property":"value"
+        }, {
+          "id":"date_after",
+          "variable": "after_start",
+          "property":"start_date"
+        }, {
+          "id":"date_after",
+          "variable": "after_end",
+          "property":"end_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_start",
+          "property":"start_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_end",
+          "property":"end_date"
+        }
+      ],
+      "query": [
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt from TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{after_start}' AND rt_test.Date_1 <= '{after_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=0  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;",
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt from TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{before_start}' AND rt_test.Date_1 <= '{before_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=0  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;"
+      ],
+      "layout": {
+        "title":"Monday(s) TT",
+        "axis":"Travel Time (min)",
+        "data1":"Selected Date",
+        "data2":"Baseline",
+        "x":"time_2",
+        "y":"avgtt",
+        "type":"date",
+        "format":"%H:%M"
+      }
+    }, {
+      "output": {
+        "id":"graph_tues",
+        "class": "small_graph",
+        "property":"figure",
+        "callback": "yes"
+      },
+      "input":[{
+          "id":"route",
+          "variable": "route",
+          "property":"value"
+        }, {
+          "id":"source",
+          "variable": "source",
+          "property":"value"
+        }, {
+          "id":"date_after",
+          "variable": "after_start",
+          "property":"start_date"
+        }, {
+          "id":"date_after",
+          "variable": "after_end",
+          "property":"end_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_start",
+          "property":"start_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_end",
+          "property":"end_date"
+        }
+      ],
+      "query": [
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{after_start}' AND rt_test.Date_1 <= '{after_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=1  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;",
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{before_start}' AND rt_test.Date_1 <= '{before_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=1  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;"
+      ],
+      "layout": {
+        "title":"Tuesday(s) TT",
+        "axis":"Travel Time (min)",
+        "data1":"Selected Date",
+        "data2":"Baseline",
+        "x":"time_2",
+        "y":"avgtt",
+        "type":"date",
+        "format":"%H:%M"
+      }
+    }, {
+      "output": {
+        "id":"graph_weds",
+        "class": "small_graph",
+        "property":"figure",
+        "callback": "yes"
+      },
+      "input":[{
+          "id":"route",
+          "variable": "route",
+          "property":"value"
+        }, {
+          "id":"source",
+          "variable": "source",
+          "property":"value"
+        }, {
+          "id":"date_after",
+          "variable": "after_start",
+          "property":"start_date"
+        }, {
+          "id":"date_after",
+          "variable": "after_end",
+          "property":"end_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_start",
+          "property":"start_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_end",
+          "property":"end_date"
+        }
+      ],
+      "query": [
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{after_start}' AND rt_test.Date_1 <= '{after_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=2  AND  rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;",
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{before_start}' AND rt_test.Date_1 <= '{before_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=2  AND  rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;"
+      ],
+      "layout": {
+        "title":"Wednesday(s) TT",
+        "axis":"Travel Time (min)",
+        "data1":"Selected Date",
+        "data2":"Baseline",
+        "x":"time_2",
+        "y":"avgtt",
+        "type":"date",
+        "format":"%H:%M"
+      }
+    }, {
+      "output": {
+        "id":"graph_thurs",
+        "class": "small_graph",
+        "property":"figure",
+        "callback": "yes"
+      },
+      "input":[{
+          "id":"route",
+          "variable": "route",
+          "property":"value"
+        }, {
+          "id":"source",
+          "variable": "source",
+          "property":"value"
+        }, {
+          "id":"date_after",
+          "variable": "after_start",
+          "property":"start_date"
+        }, {
+          "id":"date_after",
+          "variable": "after_end",
+          "property":"end_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_start",
+          "property":"start_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_end",
+          "property":"end_date"
+        }
+      ],
+      "query": [
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{after_start}' AND rt_test.Date_1 <= '{after_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=3  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;",
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{before_start}' AND rt_test.Date_1 <= '{before_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=3  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;"
+      ],
+      "layout": {
+        "title":"Thursday(s) TT",
+        "axis":"Travel Time (min)",
+        "data1":"Selected Date",
+        "data2":"Baseline",
+        "x":"time_2",
+        "y":"avgtt",
+        "type":"date",
+        "format":"%H:%M"
+      }
+    }, {
+      "output": {
+        "id":"graph_fri",
+        "class": "small_graph",
+        "property":"figure",
+        "callback": "yes"
+      },
+      "input":[{
+          "id":"route",
+          "variable": "route",
+          "property":"value"
+        }, {
+          "id":"source",
+          "variable": "source",
+          "property":"value"
+        }, {
+          "id":"date_after",
+          "variable": "after_start",
+          "property":"start_date"
+        }, {
+          "id":"date_after",
+          "variable": "after_end",
+          "property":"end_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_start",
+          "property":"start_date"
+        }, {
+          "id":"date_before",
+          "variable": "before_end",
+          "property":"end_date"
+        }
+      ],
+      "query": [
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{after_start}' AND rt_test.Date_1 <= '{after_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=4  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;",
+        "SELECT TP_def.time_2, avg(rt_test.tt) as avgtt FROM TP_def INNER JOIN rt_test on rt_test.time_1=TP_def.time_2 WHERE rt_test.date_1 >= '{before_start}' AND rt_test.Date_1 <= '{before_end}'  AND rt_test.rt_number={route} AND weekday(rt_test.date_1)=4  AND rt_test.source='{source}'  AND NOT EXISTS ( SELECT 1 FROM holidays WHERE rt_test.date_1 = holidays.holiday_date) GROUP BY TP_def.time_2 ORDER BY NULL;"
+      ],
+      "layout": {
+        "title":"Friday(s) TT",
+        "axis":"Travel Time (min)",
+        "data1":"Selected Date",
+        "data2":"Baseline",
+        "x":"time_2",
+        "y":"avgtt",
+        "type":"date",
+        "format":"%H:%M"
+      }
+    }
+  ]
+}

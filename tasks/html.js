@@ -43,7 +43,7 @@ gulp.task('html-python', ()=> {
   return gulp.src(options.root+'/src/*.nunjucks')
 		.pipe(plumber())
     .pipe(data(() => {
-			return JSON.parse(fs.readFileSync(options.root+'/data.json'))
+			return JSON.parse(fs.readFileSync(options.root+'/src/python/data.json'))
 		}))
     .pipe(nunjucksRender({
       path: [options.root+'/src/nunjucks/']

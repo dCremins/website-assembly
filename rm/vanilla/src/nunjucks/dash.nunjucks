@@ -1,11 +1,22 @@
-{% macro dashComponent(components={}) %}
+{% macro dashComponent(inputs={}, outputs={}) %}
+  <div class="inputs">
+    {% for info in inputs %}
+    <div class="component {{info.class}}">
+      {% if info.title %}
+        <h2>{{info.title}}</h2>
+      {% endif %}
+      <template id="{{info.id}}">
 
-  {% for info in components %}
-  <div class="component">
-    {% if info.title %}
-      <h2>{{info.title}}</h2>
-    {% endif %}
-    <template id="{{info.id}}" class="{{info.class}}">
+      </template>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="diagram">
+    <img class="lozad" src="/assets/misc-diagram.png" alt="{{title}} Diagram" />
+  </div>
+  {% for info in outputs %}
+  <div class="outputs {{info.output.class}}">
+    <template id="{{info.output.id}}">
 
     </template>
   </div>

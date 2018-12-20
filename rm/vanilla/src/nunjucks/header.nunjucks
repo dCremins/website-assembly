@@ -1,21 +1,27 @@
-<div id="home">
-
+<div class="header">
+  <div class="flexible">
+    <span class="sticky_bumper"></span>
+    <div class="section logo">
+      <a id="logo_holder"href="/" class="logo-img full">
+        <img id="logo_icon" class="lozad header-icon"  src="/assets/logo-icon.png" alt="{{title}} Icon Logo" />
+        <img id="logo_big" class="lozad header-icon" src="/assets/logo-text.png" alt="{{title}} Icon Logo" />
+      </a>
+      <a href="/" class="logo-img small">
+        <img class="logo_small lozad" src="/assets/logo-small.png" alt="{{title}} Logo with Icon and Text" />
+        <h1 class="small" >{{title}}</h1>
+      </a>
+    </div>
+    <div id="header" class="description section">
+      <h1 id="title">{{title}}</h1>
+      <p class="full"><strong>{{bolded}}</strong> {{description}}
+        {% if contact %}
+        {{header_contact}}
+        <a href="mailto:{{contact}}">{{contact_label}}</a>
+        {% endif %}
+      </p>
+    </div>
+  </div>
 </div>
+<div class="main_nav">
 
-<div id="navbar" class="main_nav">
-  <nav class="flexible">
-
-  </nav>
-</div>
-
-<div id="mobile_navbar" class="mobile_nav">
-  <button class="hamburger hamburger--collapse" id="mobile_button" type="button"
-        aria-label="Menu Toggle" aria-controls="mobile-navigation" aria-expanded="false">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-  <nav id="mobile-navigation" class="mobile">
-
-  </nav>
 </div>

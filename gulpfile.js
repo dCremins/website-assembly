@@ -25,7 +25,7 @@ const options = minimist(process.argv.slice(2), knownOptions)
 
 const tasks = {
   style: true,
-  script: true,
+  script: false,
   blog: false,
   html: false,
   python: false,
@@ -70,7 +70,17 @@ gulp.task('compile', gulp.series(
   tasks.favicon ? 'favicon' : 'skip',
   tasks.blog ? 'markdown' : 'skip',
   tasks.html ? 'html' : 'skip',
-  tasks.python ? 'html-python' : 'skip',
+  tasks.gzip ? 'gzip' : 'skip'
+))
+
+gulp.task('compile-python', gulp.series(
+  ()=>{ return del(options.root+'/build') },
+  tasks.script ? 'javascript-python' : 'skip',
+  tasks.style ? 'sass-python' : 'skip',
+  tasks.images ? 'images' : 'skip',
+  tasks.images ? 'imageMin' : 'skip',
+  tasks.favicon ? 'favicon' : 'skip',
+  'html-python',
   tasks.gzip ? 'gzip' : 'skip'
 ))
 
@@ -92,4 +102,6 @@ gulp.task('quick-compile', gulp.series(()=>{
   ])
 }, 'html', 'javascript', 'css'))
 
-gulp.task('build', gulp.series('compile', 'serve'))
+gulp.task('build', gulp.series(
+  tasks.python ? 'compile-python' : 'compile',
+  tasks.python ? 'serve-python' : 'serve'))

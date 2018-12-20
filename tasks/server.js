@@ -35,3 +35,9 @@ gulp.task('reload', (done)=> {
   browserSync.reload()
   done();
 })
+
+gulp.task('serve-python', ()=> {
+  return gulp.src(options.root+'/src/python/**.*')
+	  .pipe(plumber())
+    .pipe(gulp.dest(options.root+'/build'))
+})

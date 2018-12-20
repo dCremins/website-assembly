@@ -1,14 +1,9 @@
 {% import 'dash.nunjucks' as dash %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include 'head.nunjucks' %}
-</head>
-<body>
-
-  <div>
-    {{ dash.dashComponent(components) }}
+<div>
+  {% include 'header.nunjucks' %}
+  <div class="main flexible">
+    {{ dash.dashComponent(components, graph) }}
+    <div id="callback_open" style="display:hidden;"></div>
   </div>
-</body>
-</html>
+  {% include 'footer.nunjucks' %}
+</div>

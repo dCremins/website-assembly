@@ -28,3 +28,13 @@ gulp.task('javascript', () => {
 		.pipe(rename('bundled.min.js'))
 		.pipe(gulp.dest(options.root+'/build'))
 })
+
+gulp.task('javascript-python', () => {
+	return gulp.src(options.root+'/src/scripts/*.js')
+		.pipe(plumber())
+		.pipe(concat('bundled.js'))
+		.pipe(minify())
+    .pipe(optimizejs())
+		.pipe(rename('bundled.min.js'))
+		.pipe(gulp.dest(options.root+'/build/assets'))
+})

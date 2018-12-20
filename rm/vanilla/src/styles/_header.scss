@@ -149,7 +149,7 @@
   z-index:3;
 }
 
-.sticky_nav + main {
+.sticky_nav + .main {
   padding-top: 58px;
 }
 
@@ -166,7 +166,7 @@
   z-index: 1;
 }
 
-.sticky_mobile + main {
+.sticky_mobile + .main {
   padding-top: 45px;
 }
 
@@ -219,6 +219,8 @@
 
   .main_nav {
     display: block;
+    margin-bottom: 30px;
+    min-height: 30px;
   }
 
   .mobile_nav {
@@ -227,6 +229,8 @@
 
   .header {
     .logo {
+      align-items: center;
+      display: flex;
       flex: none;
       width: auto;
       z-index: 2;

@@ -27,6 +27,16 @@ gulp.task('sass', ()=> {
     .pipe(gulp.dest(options.root+'/build/css'))
 })
 
+gulp.task('sass-python', ()=> {
+  return gulp.src(options.root+'/src/styles/main.scss')
+	  .pipe(plumber())
+		.pipe(sourcemaps.init())
+	  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(rename('main.css'))
+		.pipe(sourcemaps.write())
+    .pipe(gulp.dest(options.root+'/build/assets'))
+})
+
 gulp.task('css', gulp.series('sass', ()=>{
   return gulp.src(options.root+'/build/css/main.css')
 	  .pipe(plumber())

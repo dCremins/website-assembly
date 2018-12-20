@@ -1,4 +1,4 @@
-footer {
+.footer {
   background-color: $primary;
   box-sizing: border-box;
   color: white;
@@ -12,7 +12,7 @@ footer {
     color: white;
   }
 
-  article {
+  .article {
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
@@ -44,14 +44,14 @@ footer {
 
 
 @include respond-above(sm) {
-  footer {
+  .footer {
     .flexible {
       margin: auto;
       max-width: 1500px;
       width: 80%;
     }
 
-    article {
+    .article {
       max-width: 50%;
     }
   }

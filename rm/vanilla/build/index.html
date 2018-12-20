@@ -1,51 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+<div>
+    <div class="header">
+        <div class="flexible">
+            <span class="sticky_bumper"></span>
+            <div class="section logo">
+                <a id="logo_holder" href="/" class="logo-img full">
+                    <img id="logo_icon" class="lozad header-icon" src="/assets/logo-icon.png" alt="I-540WB OnRamp Signal Evaluation Dashboard Icon Logo" />
+                    <img id="logo_big" class="lozad header-icon" src="/assets/logo-text.png" alt="I-540WB OnRamp Signal Evaluation Dashboard Icon Logo" />
+                </a>
+                <a href="/" class="logo-img small">
+                    <img class="logo_small lozad" src="/assets/logo-small.png" alt="I-540WB OnRamp Signal Evaluation Dashboard Logo with Icon and Text" />
+                    <h1 class="small">I-540WB OnRamp Signal Evaluation Dashboard</h1>
+                </a>
+            </div>
+            <div id="header" class="description section">
+                <h1 id="title">I-540WB OnRamp Signal Evaluation Dashboard</h1>
+                <p class="full"><strong></strong> This dashboard is designed to enable NCDOT to evaluate the impact of on-ramp signals on I-540WB in Raleigh, NC. Travel time data source for this dashboard is HERE.com and the volume data is collected using NCDOT fixed sensors.
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Welcome to .">
-    <meta name="author" content="">
-    <title></title>
-    <link href="css/main.css" rel="stylesheet">
+                    For any questions or bug fixes related to this tool, please contact
+                    <a href="mailto:support@itredatalab.org">support@itredatalab.org</a>
 
-</head>
-
-<body>
-
-    <div>
-
-
-
-        <div class="component">
-
-            <h2>Route #:</h2>
-
-            <template id="route" class="">
-
-            </template>
+                </p>
+            </div>
         </div>
-
-        <div class="component">
-
-            <h2>After:</h2>
-
-            <template id="date_select" class="">
-
-            </template>
-        </div>
-
-        <div class="component">
-
-            <template id="graph" class="">
-
-            </template>
-        </div>
-
-
+    </div>
+    <div class="main_nav">
 
     </div>
-</body>
 
-</html>
+    <div class="main flexible">
+
+        <div class="inputs">
+
+            <div class="component ">
+
+                <h2>Route #:</h2>
+
+                <template id="route">
+
+                </template>
+            </div>
+
+            <div class="component ">
+
+                <h2>Data Select:</h2>
+
+                <template id="source">
+
+                </template>
+            </div>
+
+            <div class="component ">
+
+                <h2>After Period:</h2>
+
+                <template id="date_after">
+
+                </template>
+            </div>
+
+            <div class="component ">
+
+                <h2>Before Period:</h2>
+
+                <template id="date_before">
+
+                </template>
+            </div>
+
+        </div>
+        <div class="diagram">
+            <img class="lozad" src="/assets/misc-diagram.png" alt=" Diagram" />
+        </div>
+
+        <div class="outputs large_graph">
+            <template id="graph_all">
+
+            </template>
+        </div>
+
+        <div class="outputs small_graph">
+            <template id="graph_mon">
+
+            </template>
+        </div>
+
+        <div class="outputs small_graph">
+            <template id="graph_tues">
+
+            </template>
+        </div>
+
+        <div class="outputs small_graph">
+            <template id="graph_weds">
+
+            </template>
+        </div>
+
+        <div class="outputs small_graph">
+            <template id="graph_thurs">
+
+            </template>
+        </div>
+
+        <div class="outputs small_graph">
+            <template id="graph_fri">
+
+            </template>
+        </div>
+
+
+
+        <div id="callback_open" style="display:hidden;"></div>
+    </div>
+    <div id="location" class="footer">
+        <div class="section flexible">
+            <div class="article">
+                <p>For any questions or further inquiries, please contact
+                    <a id="footer_mailto" href="mailto:support@itredatalab.org">support@itredatalab.org</a>
+                </p>
+
+                <p>
+                    909 Capability Dr, Suite 3600 <br />
+        Raleigh, NC, 27606
+      </p>
+                    <p>Copyright 2018</p>
+            </div>
+            <div class="article footer-img">
+                <img src="assets/misc-building.png" alt="Research Building IV on Centennial Campus at NC State University" />
+            </div>
+        </div>
+        <p class="disclaimer">
+            This site collects Google Analytics information for internal monitoring purposes. <a id="privacy_policy" href="privacy.html">Read our Privacy Policy</a> or
+            <a href="https://tools.google.com/dlpage/gaoptout/">opt-out of Google Analytics.</a>
+        </p>
+    </div>
+
+</div>

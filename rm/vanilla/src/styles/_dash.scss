@@ -1,0 +1,35 @@
+.inputs,
+.DateRangePicker,
+.DateRangePickerInput,
+.diagram,
+.large_graph,
+.small_graph {
+  width: 100%;
+}
+
+@include respond-above(sm) {
+  .inputs {
+    width: 35%;
+
+    .DateRangePicker,
+    .DateRangePickerInput {
+      width: 100%;
+    }
+  }
+
+  .diagram {
+    width: 65%;
+  }
+
+  .outputs {
+    &.large_graph {
+      width: 100%;
+    }
+
+    &.small_graph {
+      display: block;
+      flex: 1;
+      min-width: 30%;
+    }
+  }
+}
