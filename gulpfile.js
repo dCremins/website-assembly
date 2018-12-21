@@ -25,7 +25,7 @@ const options = minimist(process.argv.slice(2), knownOptions)
 
 const tasks = {
   style: true,
-  script: false,
+  script: true,
   blog: false,
   html: false,
   python: false,

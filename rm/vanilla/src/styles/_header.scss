@@ -175,6 +175,13 @@
     display: block;
   }
 
+  .sticky_bar {
+    position: fixed;
+    width: 100%;
+    top: 53px;
+    z-index: 10;
+  }
+
   .sticky_bumper {
     background-color: white;
     display:block;
@@ -198,7 +205,7 @@
     .sticky_fixed {
       position: fixed;
       padding-top: 3px;
-      top: 0;
+      top: 10px;
     }
     .sticky {
       background-color: white;
