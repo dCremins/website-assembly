@@ -6,6 +6,7 @@ const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 const sourcemaps = require('gulp-sourcemaps')
 const minimist = require('minimist')
+const rev = require('gulp-rev')
 
 const knownOptions = {
   string: 'root',
@@ -22,9 +23,9 @@ gulp.task('sass', ()=> {
 	  .pipe(plumber())
 		.pipe(sourcemaps.init())
 	  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(rename('main.css'))
+		.pipe(rename('main'))
 		.pipe(sourcemaps.write())
-    .pipe(gulp.dest(options.root+'/build/css'))
+    .pipe(gulp.dest(options.root+'/holder'))
 })
 
 gulp.task('sass-python', ()=> {
@@ -33,16 +34,24 @@ gulp.task('sass-python', ()=> {
 		.pipe(sourcemaps.init())
 	  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(rename('main.css'))
+    .pipe(rev())
 		.pipe(sourcemaps.write())
     .pipe(gulp.dest(options.root+'/build/assets'))
 })
 
 gulp.task('css', gulp.series('sass', ()=>{
-  return gulp.src(options.root+'/build/css/main.css')
+  return gulp.src(options.root+'/holder/main')
 	  .pipe(plumber())
 		.pipe(sourcemaps.init())
     .pipe(autoprefixer())
 		.pipe(cleanCSS({compatibility: 'ie7'}))
+    .pipe(rev())
 		.pipe(sourcemaps.write())
+		.pipe(rename({extname: ".css"}))
     .pipe(gulp.dest(options.root+'/build/css'))
+    .pipe(rev.manifest(options.root+'/src/nunjucks/data.json',{
+      base:options.root+'/src/nunjucks/',
+			merge: true // Merge with the existing manifest if one exists
+		}))
+		.pipe(gulp.dest(options.root+'/src/nunjucks/'))
 }))

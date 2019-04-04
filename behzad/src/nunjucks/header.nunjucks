@@ -35,7 +35,7 @@
 <section id="navbar" class="main_nav">
   <nav class="flexible">
     {% for item in nav %}
-    <a id="main_{{item.id}}" href="/#{{item.id}}">{{item.label}}</a>
+    <a id="main_{{item.id}}" href="/{{nav_leader}}#{{item.id}}">{{item.label}}</a>
     {% endfor %}
   </nav>
 </section>

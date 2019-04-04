@@ -1,37 +1,44 @@
 {
-  "title":"Driver and Transportation Analytics Lab",
-  "author": "Behzad Aghdashi",
-  "bolded": "D.a.T.A. Lab at ITRE",
-  "description": "provides analytical facilities and support to analyze big data, visualization, and predictions in transportation industry. This page serves as a central point to connect to different tools developed in this laboratory. For all the tools developed in DaTA lab, a link is placed in this screen. Different tools have different authentication methods.",
-  "header_contact": "If you need access to these tools, please contact",
-  "contact": "saghdas@ncsu.edu",
-  "contact_label": "Behzad Aghdashi",
   "address1": "909 Capability Dr, Suite 3600",
   "address2": "Raleigh, NC, 27606",
+  "author": "Behzad Aghdashi",
+  "bolded": "D.a.T.A. Lab at ITRE",
+  "bundled": "bundled-d02b783039.js",
+  "contact": "saghdas@ncsu.edu",
+  "contact_label": "Behzad Aghdashi",
+  "description": "provides analytical facilities and support to analyze big data, visualization, and predictions in transportation industry. This page serves as a central point to connect to different tools developed in this laboratory. For all the tools developed in DaTA lab, a link is placed in this screen. Different tools have different authentication methods.",
+  "header_contact": "If you need access to these tools, please contact",
+  "main": "main-93768b7b2e.css",
   "nav": [
     {
       "label": "Home",
       "id": "home"
-    }, {
+    },
+    {
       "label": "Tools",
       "id": "tools"
-    }, {
+    },
+    {
       "label": "What We Do",
       "id": "whatwedo"
-    }, {
+    },
+    {
       "label": "Who We Are",
       "id": "whoweare"
-    }, {
+    },
+    {
       "label": "Location",
       "id": "location"
     }
-  ],"resources": {
+  ],
+  "nav_leader": "home/",
+  "resources": {
     "id": "tools",
     "title": "",
     "description": "",
     "video": {
-      "title":"",
-      "url":""
+      "title": "",
+      "url": ""
     },
     "tools": [
       {
@@ -40,55 +47,64 @@
         "description": "This tool provides a analytical approach based on NCHRP 765 for analysis of demand peaks",
         "button": "Visit Peak Spreading Tool",
         "link": "http://pst.itredatalab.org/"
-      },{
+      },
+      {
         "icon": "traffic",
         "title": "Interactive Traffic Violation Video Archive",
         "description": "this tool provides a central resource to search for a variaty of traffic violations video footage in Wake county",
         "button": "Visit Interactive Traffic Violation Video Archive",
         "link": "http://tvv.itredatalab.org/"
-      }, {
+      },
+      {
         "icon": "bike",
         "title": "BikePed Analytics",
         "description": "The online BiPed Analytics tool provides a comprehensive set of facilities to collect pedestrian and bicycle counts along with validation, applying correction factors, and converting them to TMG format",
         "button": "Visit BikePed Analytics",
         "link": "http://biped.itredatalab.org/"
-      }, {
+      },
+      {
         "icon": "ramp",
         "title": "On-Ramp Signal's Evaluation Tool",
         "description": "This tool is designed to help NCDOT and its stakeholders to analyze the operation of on-ramp signals in NC",
         "button": "Visit On-Ramp Signal's Evaluation Tool",
         "link": "http://rm.itredatalab.org/"
-      }, {
+      },
+      {
         "icon": "icm",
         "title": "Integrated Corridor Management",
         "description": "Integrated Corridor Management tool provides facilities to evaluate traffic operation on corridors managed by Active Traffic Management (ATM) strategies.",
         "button": "Visit ICM Tool",
         "link": "http://icm.itredatalab.org"
-      },{
+      },
+      {
         "icon": "intersection",
         "title": "CostVal",
         "description": "CostVal or Intersection lifecycle analysis tool provides facilities to evaluate life cycle costs for different intersection alternatives.",
         "button": "Visit CostVal",
         "link": "http://costval.itredatalab.org"
-      }, {
+      },
+      {
         "icon": "signal",
         "title": "Signal Prioritization (SPM)",
         "description": "The NCDOT's cloud based signal prioritization tool provide facilities to NCDOT staff and engineers to prioritize signal timing plans change.",
         "button": "Visit Signal Prioritization (SPM)",
         "link": "http://spm.itredatalab.org/"
-      }, {
+      },
+      {
         "icon": "freeval",
         "title": "FREEVAL",
         "description": "FREEVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
         "button": "Visit FREEVAL",
         "link": "http://freeval.org/"
-      }, {
+      },
+      {
         "icon": "streetval",
         "title": "STREETVAL",
         "description": "STREETVAL is the official computational engine for freeway facilities analysis based on the 6th edition of Highway Capacity Manual (HCM).",
         "button": "Visit STREETVAL",
         "link": "http://streetval.itredatalab.org/"
-      }, {
+      },
+      {
         "icon": "",
         "title": "School Location Optimization",
         "description": "SLO is a cloud based planning level optimization tool for locating the optimal locations to build new schools.",
@@ -104,108 +120,128 @@
       "id": "itre_staff",
       "members": [
         {
-    			"name": "Behzad Aghdashi, Ph.D.",
-    			"title": "Research Associate at ITRE",
-    			"image": "Behzad"
-    		}, {
-    			"name": "Thomas Chase, P.E.",
-    			"title": "Research Associate at ITRE",
-    			"image": "Chase"
-    		}, {
-    			"name": "Devin Cremins",
-    			"title": "Web Specialist",
-    			"image": "Cremins"
-    		}, {
-    			"name": "Andy Pottkotter",
-    			"title": "Graphic Design Specialist",
-    			"image": "Pottkotter"
-    		},{
-    			"name": "Blythe Carter",
-    			"title": "Research Assistant at ITRE",
-    			"image": "Carter"
-    		}, {
-    			"name": "Shams Tanvi",
-    			"title": "Research Associate at ITRE",
-    			"image": "Tanvir"
-    		}, {
-    			"name": "Heyt Patel",
-    			"title": "Software Developer",
-    			"image": "Heyt"
-    		}, {
-    			"name": "Prakshat Shah",
-    			"title": "Software Developer",
-    			"image": "Prakshat"
-    		}, {
-    			"name": "Aditya Shah",
-    			"title": "Software Developer",
-    			"image": "Aditya"
-    		}
+          "name": "Behzad Aghdashi, Ph.D.",
+          "title": "Research Associate at ITRE",
+          "image": "Behzad"
+        },
+        {
+          "name": "Thomas Chase, P.E.",
+          "title": "Research Associate at ITRE",
+          "image": "Chase"
+        },
+        {
+          "name": "Devin Cremins",
+          "title": "Web Specialist",
+          "image": "Cremins"
+        },
+        {
+          "name": "Andy Pottkotter",
+          "title": "Graphic Design Specialist",
+          "image": "Pottkotter"
+        },
+        {
+          "name": "Blythe Carter",
+          "title": "Research Assistant at ITRE",
+          "image": "Carter"
+        },
+        {
+          "name": "Shams Tanvi",
+          "title": "Research Associate at ITRE",
+          "image": "Tanvir"
+        },
+        {
+          "name": "Heyt Patel",
+          "title": "Software Developer",
+          "image": "Heyt"
+        },
+        {
+          "name": "Prakshat Shah",
+          "title": "Software Developer",
+          "image": "Prakshat"
+        },
+        {
+          "name": "Aditya Shah",
+          "title": "Software Developer",
+          "image": "Aditya"
+        }
       ]
-    }, {
+    },
+    {
       "name": "Civil Engineering Department",
       "tab": "2",
       "id": "civil_staff",
       "members": [
         {
-    			"name": "Nagui Rouphail, Ph.D.",
-    			"title": "Professor at NCSU Civil Engineering Department",
-    			"description": "",
-    			"image": "Nagui"
-    		}, {
-    			"name": "Billy Williams",
-    			"title": "Professor at NCSU Civil Engineering Department",
-    			"description": "",
-    			"image": "Billy"
-    		}
+          "name": "Nagui Rouphail, Ph.D.",
+          "title": "Professor at NCSU Civil Engineering Department",
+          "description": "",
+          "image": "Nagui"
+        },
+        {
+          "name": "Billy Williams",
+          "title": "Professor at NCSU Civil Engineering Department",
+          "description": "",
+          "image": "Billy"
+        }
       ]
-    }, {
+    },
+    {
       "name": "Former Collaborators",
       "tab": "3",
       "id": "former_staff",
       "members": [
-       {
-    			"name": "J. Lake Trask",
-    			"title": "Transportation Analyst at Kittelson and Associates Inc.",
-    			"image": ""
-    		}, {
-    			"name": "Alaykumar Patel",
-    			"title": "Graduate Student",
-    			"image": ""
-    		}
-        , {
-    			"name": "Gowtham Ramesh",
-    			"title": "Software Engineer at Microsoft",
-    			"image": ""
-    		}, {
-    			"name": "Parth Satra",
-    			"title": "Software Engineer at Amazon",
-    			"image": ""
-    		}, {
-    			"name": "Sandeep Samdaria",
-    			"title": "Software Engineer at Amazon",
-    			"image": ""
-    		}, {
-    			"name": "Jigar Sharda",
-    			"title": "Software Engineer at Facebook",
-    			"image": ""
-    		}, {
-    			"name": "Shu Liu",
-    			"title": "Software Engineer at Bloomberg LP",
-    			"image": ""
-    		}, {
-    			"name": "Nabaruna Karmakar",
-    			"title": "PhD Student in Industrial and Systems Engineering",
-    			"image": ""
-    		}, {
-    			"name": "Prashant Pandey",
-    			"title": "Graduate Student in Computer Science",
-    			"image": ""
-    		}, {
-    			"name": "Chinmoy Jyoti",
-    			"title": "Graduate Student in Computer Science",
-    			"image": ""
-    		}
+        {
+          "name": "J. Lake Trask",
+          "title": "Transportation Analyst at Kittelson and Associates Inc.",
+          "image": ""
+        },
+        {
+          "name": "Alaykumar Patel",
+          "title": "Graduate Student",
+          "image": ""
+        },
+        {
+          "name": "Gowtham Ramesh",
+          "title": "Software Engineer at Microsoft",
+          "image": ""
+        },
+        {
+          "name": "Parth Satra",
+          "title": "Software Engineer at Amazon",
+          "image": ""
+        },
+        {
+          "name": "Sandeep Samdaria",
+          "title": "Software Engineer at Amazon",
+          "image": ""
+        },
+        {
+          "name": "Jigar Sharda",
+          "title": "Software Engineer at Facebook",
+          "image": ""
+        },
+        {
+          "name": "Shu Liu",
+          "title": "Software Engineer at Bloomberg LP",
+          "image": ""
+        },
+        {
+          "name": "Nabaruna Karmakar",
+          "title": "PhD Student in Industrial and Systems Engineering",
+          "image": ""
+        },
+        {
+          "name": "Prashant Pandey",
+          "title": "Graduate Student in Computer Science",
+          "image": ""
+        },
+        {
+          "name": "Chinmoy Jyoti",
+          "title": "Graduate Student in Computer Science",
+          "image": ""
+        }
       ]
     }
-  ]
+  ],
+  "title": "Driver and Transportation Analytics Lab"
 }

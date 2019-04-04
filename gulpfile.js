@@ -1,5 +1,6 @@
 
 const gulp = require('gulp')
+const browserSync = require('browser-sync').create()
 const del = require('del')
 const gzip = require('gulp-gzip')
 const log = require('fancy-log')
@@ -43,6 +44,7 @@ switch(options.style) {
     break
   default:
     tasks.html = true
+    tasks.gzip = true
     break
 }
 
@@ -61,6 +63,31 @@ gulp.task('gzip', () => {
 		.pipe(gulp.dest(options.root+'/build'))
 })
 
+gulp.task('serve', function(done) {
+  browserSync.init({
+    server: {
+      baseDir: options.root+'/build'
+    }
+  }, function (err, bs) {
+    bs.addMiddleware("*", require('connect-gzip-static')(options.root+'/build'), {
+      override: true
+    })
+  })
+  gulp.watch(options.root+'/src/**/*', gulp.series('quick-compile', 'reload'))
+  done();
+})
+
+gulp.task('reload', (done)=> {
+  browserSync.reload()
+  done();
+})
+
+gulp.task('serve-python', ()=> {
+  return gulp.src(options.root+'/src/python/**.*')
+	  .pipe(plumber())
+    .pipe(gulp.dest(options.root+'/build'))
+})
+
 gulp.task('compile', gulp.series(
   ()=>{ return del(options.root+'/build') },
   tasks.script ? 'javascript' : 'skip',
@@ -70,7 +97,8 @@ gulp.task('compile', gulp.series(
   tasks.favicon ? 'favicon' : 'skip',
   tasks.blog ? 'markdown' : 'skip',
   tasks.html ? 'html' : 'skip',
-  tasks.gzip ? 'gzip' : 'skip'
+  tasks.gzip ? 'gzip' : 'skip',
+  ()=>{ return del(options.root+'/holder') }
 ))
 
 gulp.task('compile-python', gulp.series(
