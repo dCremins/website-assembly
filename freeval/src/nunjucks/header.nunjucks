@@ -2,7 +2,7 @@
   <div class="flexible header">
     <span class="sticky_bumper"></span>
     <section class="logo">
-      <a id="logo_holder" href="/" alt="{{title}}" class="logo-img full">
+      <a id="logo_holder" href="/" alt="{{title}}" class="logo-img full single-logo">
         <picture id="logo" class="lozad" data-iesrc="assets/logo-small.png" data-alt="{{title}} Icon Logo">
           <source srcset="assets/logo-small.png" type="image/png">
           <source srcset="assets/logo-small.webp" type="image/webp">
@@ -17,7 +17,7 @@
       </a>
     </section>
     <section id="header" class="description">
-      <h1 id="title">{{title}}</h1>
+      <h1 id="title" class="single-logo">{{title}}</h1>
       <p class="full"><strong>{{bolded}}</strong> {{description}}
         {% if contact %}
         {{header_contact}}

@@ -43,12 +43,14 @@
 
 @include respond-above(sm) {
   .seventy {
+    align-self: center;
     box-sizing: border-box;
     padding-right: 40px;
     width: 70%;
   }
 
   .thirty {
+    align-self: center;
     text-align: center;
     width: 30%;
   }

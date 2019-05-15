@@ -14,3 +14,16 @@
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@mixin size-fallback($size) {
+  $value: strip-unit($size);
+  font-size: $value * 16px;
+  font-size: $value * 1rem;
+}

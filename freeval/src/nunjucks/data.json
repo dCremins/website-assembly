@@ -1,87 +1,31 @@
 {
-  "title":"FREEVAL",
-  "author": "Behzad Aghdashi",
-  "bolded": "FREEVAL",
-  "description": "is a powerful macroscopic freeway analysis tool based on Highway Capacity Manual (HCM). Its unique features include processing speed, software reliability and user friendliness",
-  "contact": "support@freeval.org",
-  "contact_label": "support@freeval.org",
   "address1": "909 Capability Dr, Suite 3600",
   "address2": "Raleigh, NC, 27606",
-  "phone": "Or call (919) 515-8580",
-  "nav": [
-    {
-      "label": "Home",
-      "id": "home"
-    }, {
-      "label": "Use Cases",
-      "id": "uses"
-    }, {
-      "label": "Downloads",
-      "id": "downloads"
-    }, {
-      "label": "FAQ and Resources",
-      "id": "faq"
-    }, {
-      "label": "Training",
-      "id": "training"
-    }, {
-      "label": "Contact",
-      "id": "contact"
-    }
-  ],
-  "ignore": {
-    "id": "downloads"
-  },
-  "uses": {
-    "id": "uses",
-    "title": "Use Cases",
-    "description": "",
-    "articles": [
-      {
-        "title":"Capacity Analysis",
-        "text":"FREEVAL can perform capacity analysis based on Highway Capacity Manual (HCM)",
-        "link": ""
-      },
-      {
-        "title":"Work Zone Impact Assessment Analysis",
-        "text":"FREEVAL can perform work zone impact assessment analysis based on Highway Capacity Manual (HCM)",
-        "link": ""
-      },
-      {
-        "title":"Managed Lanes Analysis",
-        "text":"FREEVAL can analyze the operation of managed lanes such as (HOV, HOT, Express ways) based on Highway Capacity Manual (HCM)",
-        "link": ""
-      },
-      {
-        "title":"Travel Time Reliability",
-        "text":"FREEVAL can assess the reliability of a freeway system based on Highway Capacity Manual (HCM)",
-        "link": ""
-      }
-    ],
-    "resources": [
-      {
-        "image": {
-          "alt": "Freeval class computer lab",
-          "url": "misc-freeval"
-        }
-      },
-      {
-        "image": {
-          "alt": "Freeval workshop presentation and work groups",
-          "url": "misc-freeval2"
-        }
-      }
-    ]
-  },
+  "author": "Behzad Aghdashi",
+  "bolded": "FREEVAL",
+  "bundled": "bundled-6893bf3002.js",
+  "contact": "support@freeval.org",
+  "contact_label": "support@freeval.org",
+  "description": "is a powerful macroscopic freeway analysis tool based on Highway Capacity Manual (HCM). Its unique features include processing speed, software reliability and user friendliness",
   "downloads": {
     "id": "downloads",
     "title": "Download FREEVAL",
     "description": "FREEVAL is a free tool, and all versions in listed in this section can be downloaded from this website. Note that, the HCM base version is also availble at hcmvoume4.org",
     "video": {
-      "title":"",
-      "url":""
+      "title": "",
+      "url": ""
     },
     "tools": [
+      {
+        "icon": "",
+        "title": "FREEVAL-NC",
+        "description": "",
+        "list": [
+          "Built-in NC Freeways",
+          "Google Maps Integration",
+          "NC Specific Parameters"
+        ]
+      },
       {
         "icon": "",
         "title": "FREEVAL+",
@@ -93,38 +37,8 @@
         ],
         "button": "Download FREEVAL+",
         "link": "/download/FREEVAL_PLUS_20180219.zip"
-      }, {
-        "icon": "",
-        "title": "FREEVAL-NC",
-        "description": "",
-        "list": [
-          "Built-in NC Freeways",
-          "Google Maps Integration",
-          "NC Specific Parameters"
-        ]
-      }, {
-        "icon": "",
-        "title": "FREEVAL-WZ",
-        "description": "",
-        "list": [
-          "Planning Level Data Entry",
-          "PDF Reports",
-          "Work Zone Analysis "
-        ],
-        "button": "Download FREEVAL-WZ",
-        "link": "/download/FREEVAL_WZ.zip"
-      }, {
-        "icon": "",
-        "title": "FREEVAL-DSS",
-        "description": "",
-        "list": [
-          "Simulates a TMC",
-          "Implemets ATDM Strategies",
-          "Assesses Impact of ATM"
-        ],
-        "button": "Download FREEVAL-DSS",
-        "link": "/download/FREEVAL_DSS.zip"
-      }, {
+      },
+      {
         "icon": "",
         "title": "FREEVAL-HCM",
         "description": "",
@@ -137,14 +51,67 @@
       }
     ]
   },
+  "faq": {
+    "id": "faq",
+    "title": "FAQ",
+    "articles": [
+      {
+        "title": "How do I download FREEVAL-WZ or FREEVAL-DSS?",
+        "text": "FREEVAL+ contains all FREEVAL-WZ and FREEVAL-DSS modules. You can download FREEVAL+ from this website. Once you execute the program, go to \"Toolbox Menu\" and click on FREEVAL-WZ or FREEVAL-DSS."
+      },
+      {
+        "title": "What are the system requirements for FREEVAL?",
+        "text": "FREEVAL is written in Java and, therefore, only requires the Java SE Runtime Environment 8 (JRE). Consult the system requirements for the JRE here."
+      },
+      {
+        "title": "How do FREEVAL’s analyses compare to those specified in the Highway Capacity Manual (6th ed.)?",
+        "text": "FREEVAL replicates the methods of analysis specified in Chapters 10, 11, 12, 13, 14, 25, and 26 of the Highway Capacity Manual (6th ed.)."
+      },
+      {
+        "title": "What do I need to do if I have questions or problems using FREEVAL?",
+        "text": "If you have any problems using FREEVAL, contact support@freeval.org."
+      },
+      {
+        "title": "Can I obtain a customized version of FREEVAL?",
+        "text": "ITRE can customize FREEVAL to match your specific needs! For example, if you have an in-house data source, FREEVAL can be connected to it. FREEVAL can also be tuned to produce reports according to your organization’s formatting standards. Contact support@freeval.org for a consultation."
+      }
+    ]
+  },
+  "ignore": {
+    "id": "downloads"
+  },
+  "main": "main-0958003cdd.css",
+  "nav": [
+    {
+      "label": "Home",
+      "id": "home"
+    },
+    {
+      "label": "Use Cases",
+      "id": "uses"
+    },
+    {
+      "label": "Segmentation Database",
+      "id": "segmentation"
+    },
+    {
+      "label": "Downloads",
+      "id": "downloads"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Training",
+      "id": "training"
+    }
+  ],
+  "phone": "Or call (919) 515-8580",
   "resources": {
     "id": "resources",
     "title": "Resources",
     "description": "",
-    "video": {
-      "title":"Introduction to Freeval 2015",
-      "url":"https://www.youtube.com/embed/jarNeS_yaak"
-    },
     "tools": [
       {
         "icon": "youtube",
@@ -152,8 +119,24 @@
         "description": "",
         "resources": [
           {
-            "text": "ITRE's YouTube Channel",
-            "link": "https://www.youtube.com/channel/UCAEqbVtyZXpb27rp8p95mIQ"
+            "text": "Introduction to FREEVAL 2015e",
+            "link": "https://youtu.be/jarNeS_yaak"
+          },
+          {
+            "text": "How to Create and Edit a Facility",
+            "link": "https://youtu.be/ixV0T1FEkSg"
+          },
+          {
+            "text": "Travel Time Reliability Analysis",
+            "link": "https://youtu.be/Tu5qHvidGKs"
+          },
+          {
+            "text": "Active Traffic and Demand Management Analysis",
+            "link": "https://youtu.be/9g3GLVZz37M"
+          },
+          {
+            "text": "Dynamic Strategy Selection",
+            "link": "https://youtu.be/NPSt_rVq1-A"
           }
         ]
       },
@@ -189,61 +172,81 @@
       }
     ]
   },
-  "faq": {
-    "id": "faq",
-    "title": "FAQ",
-    "description": "Remember! If you cannot find your question here, send it to support@freeval.org",
+  "segmentation": {
+    "id": "segmentation",
+    "left": true,
+    "title": "FREEVAL-NC Freeway Segmentation Database",
+    "description": "The FREEVAL-NC Freeway Segmentation Database contains geometric and demand information for North Carolina freeways, interstate and non-interstate, which can be imported into the FREEVAL-NC computational engine. It contains the following data:",
+    "list": [
+      "Geometry (segment type, segment length, free flow speed, number of lanes, etc.)",
+      "Google Maps Integration",
+      "Demand (flow rates, percent trucks, etc.)"
+    ],
     "articles": [
       {
-        "title":"What are the Operating System Requirements for FREEVAL?",
-        "text":"FREEVAL is developed in Java environment and as such it can be run under any operating systems ranging from MS Windoes and Mac OS to Linux operating system. The only requirement is to install Java Runtime Environment (JRE) version 8 and later."
-      },
+        "title": "",
+        "text": "",
+        "link": {
+          "url": "http://freeval.org/download/FREEVAL_PLUS_20180219.zip",
+          "text": "Go to the FREEVAL-NC Freeway Segmentation Database"
+        }
+      }
+    ],
+    "resources": [
       {
-        "title":"How Similar or Different is FREEVAL Compared to HCM?",
-        "text":"FREEVAL replicates the freeway analysis in Highway Capacity Manual (HCM). All methods documented in Chapters 10, 11, 12, 13, 14, 25, and 26 are implemented in FREEVAL. This includes freeway facilities, reliailty, managed lanes, work zones and etc. analyses."
-      },
-      {
-        "title":"What do I need to do if I have Questions or Problems Using FREEVAL?",
-        "text":"If you have any problems using FREEVAL, please do not hesitate to contact us at support@freeval.org."
-      },
-      {
-        "title":"What would it take for me to customize FREEVAL to my own specific use cases?",
-        "text":"We do customize FREEVAL to match your specific needs. This can range from connecting FREEVAL to in-house data sources to standard reports generations. please do not hesitate to contact us at support@freeval.org."
+        "image": {
+          "alt": "DataLab Segmentation Logo",
+          "url": "icon-segmentation",
+          "class": "icon"
+        }
       }
     ]
   },
+  "title": "FREEVAL",
   "training": {
     "id": "training",
     "title": "Training",
-    "description": "We provide different types of training for FREEVAL including Workshops, Classes, Webinars and etc. Please contact us to get more detailed information on FREEVAL training.",
-    "articles": [
-      {
-        "title":"Classes",
-        "text":"We provide classes for any specific use case such as Travel Time Reliability or work zone analysis.",
-        "link": "mailto:classes@freeval.org"
-      },
-      {
-        "title":"Workshops",
-        "text":"We provide workshops focusing on special use cases for FREEVAL. The workshops can be either hands-on or not. Please contact us for more information about our workshops.",
-        "link": "mailto:workshop@freeval.org"
-      },
-      {
-        "title":"Webinars",
-        "text":"We offer FREEVAL webinars on any topic related to FREEVAL as well as Highway Capacity Manual's analyses. Please contact us to get more information about our webinars.",
-        "link": "mailto:webinar@freeval.org"
-      }
-    ],
+    "description": "We provide different types of training for FREEVAL including workshops, classes, webinars etc. We are flexible and open to hold the trainings at your location. Please contact us to discuss your specific needs.",
     "resources": [
       {
         "image": {
           "alt": "Freeval class computer lab",
           "url": "misc-class2"
         }
+      }
+    ]
+  },
+  "uses": {
+    "id": "uses",
+    "title": "Use Cases",
+    "description": "",
+    "articles": [
+      {
+        "title": "Capacity Analysis",
+        "text": "FREEVAL provides freeway planning-level capacity analyses based on HCM6 for undersaturated and oversaturated conditions.",
+        "link": ""
       },
       {
+        "title": "Work Zone Impact Assessment Analysis",
+        "text": "FREEVAL provides work zone impact assessments based on HCM6 for planning-level and operational-level analyses.",
+        "link": ""
+      },
+      {
+        "title": "Managed Lanes Analysis",
+        "text": "FREEVAL evaluates the operation of managed lanes such as (HOV, HOT, Express ways) based on HCM6.",
+        "link": ""
+      },
+      {
+        "title": "Travel Time Reliability Analysis",
+        "text": "FREEVAL assesses the travel time reliability of freeway systems based on the HCM6 reliability scenario generation method.",
+        "link": ""
+      }
+    ],
+    "resources": [
+      {
         "image": {
-          "alt": "Freeval workshop presentation and work groups",
-          "url": "misc-workshop1"
+          "alt": "Freeval example screenshot",
+          "url": "misc-freeval"
         }
       }
     ]

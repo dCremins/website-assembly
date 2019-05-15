@@ -1,4 +1,10 @@
-$primary: #990000;
+$red: #cb2027;
+$blue: #2b7cb5;
+$grey: #ced4da;
+$ink: #1b1b1b;
+
+$primary: $red;
+$secondary: $blue;
 
 $font-family:
   -apple-system,
@@ -14,15 +20,16 @@ $font-family:
   sans-serif;
 
 $breakpoints: (
-  xs: 576px,
-  sm: 768px,
-  md: 992px,
-  lg: 1080px
+  xs: 576px, //phones
+  sm: 768px, // tablet
+  md: 992px, // small screen
+  lg: 1080px // large screen
 );
 
 // Perfect Fourth Modular Scale
-$mt0: 1em;
-$mt1: 1.333em;
-$mt2: 1.777em;
-$mt3: 2.369em;
-$mt4: 3.157em;
+$mt-1: 0.75rem;
+$mt0: 1rem;
+$mt1: 1.333rem;
+$mt2: 1.777rem;
+$mt3: 2.369rem;
+$mt4: 3.157rem;

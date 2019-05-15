@@ -20,29 +20,28 @@
     <section id="whatwedo">
       <h2>What We Do</h2>
       <article>
-        <h3>Institute for Transportation Research and Education</h3>
+        <h3>What does “Technology Transfer” Mean in the Research Industry?</h3>
         <p>
-          The Institute for Transportation Research and Education (ITRE) is an institutional center located at NC State University. Chartered by the North Carolina General Assembly in 1978, ITRE conducts surface and air transportation research, training, and technical support activities for municipal, state, federal, and international clients in order to address critical transportation issues. ITRE is committed to developing leadership in its study of transportation issues through fostering analytical thinking, integrating technology in education and research, serving as a catalyst for problem solving, and cultivating professionals and students dedicated to excellence in transportation.
-        </p>
-      </article>
-      <article>
-        <h3>Driver and Transportation Analytics Laboratory</h3>
-        <p>
-          DaTA lab in ITRE has access to NC State Universities resources including faculties, students, and staff as well as hardware and software to offer:
-
+          We believe in the intuitive and error-proof methods of developing research products to assure their productive and accurate implementation.
+          ITRE DaTA Laboratory at NC State University focuses on developing software tools and database repositories for the transportation industry.
+          Our focus is primarily on:
           <ul>
+            <li>Develop Application Oriented Tools</li>
             <li>Analyze and Mine Big Data</li>
             <li>Store and Share Data and Tools</li>
-            <li>Application Oriented Tool Development</li>
           </ul>
         </p>
         <p>
-          Connection to clients is an important goal for DaTA labs in ITRE. As such, any possible effort is performed to assure complete technology transfer including:
+          Constant interaction with clients is an important goal for DaTA Laboratory in ITRE.
+          As such, any possible effort will be undertaken to assure a complete technology transfer including:
           <ul>
             <li>Training (Webinars, in Class, etc.)</li>
             <li>Packages Customization</li>
             <li>Tools Support</li>
           </ul>
+        </p>
+        <p>
+          For further information, please contact <a href="mailto:support@itredatalab.org">support@itredatalab.org</a>
         </p>
       </article>
     </section>

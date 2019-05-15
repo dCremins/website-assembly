@@ -27,6 +27,6 @@
     <a href="https://tools.google.com/dlpage/gaoptout/">opt-out of Google Analytics.</a>
   </p>
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-  <script src="./bundled.min.js" defer></script>
+  <script src="{{bundled}}" defer></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </footer>

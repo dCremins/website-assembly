@@ -10,11 +10,14 @@
     "behzad-production": "gulp compile --root behzad --home itredatalab.org/home",
     "freeval-production": "gulp compile --root freeval --home freeval.org",
     "vanilla": "gulp build --root rm/vanilla --style python",
-    "serve": "gulp serve"
+    "serve": "gulp serve",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "author": "Devin Cremins",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
+    "browser-sync": "^2.26.5",
     "connect-gzip-static": "^2.1.1",
     "debug": "^4.1.1",
     "del": "^3.0.0",
@@ -28,8 +31,10 @@
     "gulp-gzip": "^1.4.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-hub": "frankwallis/gulp-hub#4.1.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-jsoncombine": "^1.0.4",
     "gulp-markdown-to-json": "^1.1.0",
+    "gulp-nunjucks-render": "^2.2.3",
     "gulp-optimize-js": "^1.1.0",
     "gulp-plumber": "^1.2.0",
     "gulp-pretty-html": "^2.0.9",
@@ -43,11 +48,13 @@
     "list-stream": "^1.0.1",
     "markdown-it": "^8.4.2",
     "markdown-json": "^1.4.0",
+    "marked": "^0.6.2",
     "modularscale-sass": "^3.0.7",
     "nunjucks": "^3.2.0",
     "sass": "^1.13.2",
     "sharp": "^0.20.8",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "snyk": "^1.147.2"
   },
   "browserslist": [
     "defaults",
@@ -56,7 +63,6 @@
     "last 3 ie versions",
     "last 3 Chrome versions"
   ],
-  "devDependencies": {
-    "snyk": "^1.147.2"
-  }
+  "devDependencies": {},
+  "snyk": true
 }

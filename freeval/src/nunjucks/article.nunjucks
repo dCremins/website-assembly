@@ -1,14 +1,48 @@
 {% macro renderSection(section=training) %}
 
 <section id="{{section.id}}" class="flexible">
-  <h2 class="">{{section.title}}</h2>
+
+  {% if section.resources and section.left %}
+    <aside class="thirty">
+      {% for resource in section.resources %}
+        <article class="sidebar">
+        {% if resource.image %}
+          <picture class="lozad {{resource.image.class}}" data-iesrc="assets/{{resource.image.url}}.png" data-alt="{{resource.image.alt}}">
+            <source srcset="assets/{{resource.image.url}}.png" type="image/png">
+            <source srcset="assets/{{resource.image.url}}.webp" type="image/webp">
+          </picture>
+        {% endif %}
+
+        {% if resource.title %}
+          <h3>{{resource.title}}</h3>
+        {% endif %}
+
+        {% if resource.links %}
+          {% for link in resource.links %}
+            <a href="{{link.url}}">{{link.text}}</a>
+          {% endfor %}
+        {% endif %}
+        </article>
+      {% endfor %}
+    </aside>
+  {% endif %}
 
 {% if section.resources %} <article class="seventy"> {% endif %}
 {% if not section.resources %} <article> {% endif %}
+
+    <h2 class="">{{section.title}}</h2>
+    
     {% if section.description %}
       <p>
         {{section.description}}
       </p>
+    {% endif %}
+    {% if section.list %}
+      <ul>
+        {% for item in section.list %}
+          <li>{{item}}</li>
+        {% endfor %}
+      </ul>
     {% endif %}
     {% for article in section.articles %}
       <article>
@@ -23,8 +57,14 @@
              </ul>
            {% endif %}
         </p>
-        {% if article.link %}
-          <a class="article_link" href="{{article.link}}">Contact us to discuss {{article.title}}</a>
+        {% if article.link.url %}
+          <a class="article_link" href="{{article.link.url}}">
+            {{ article.link.text if article.link.text else "Contact us to discuss {{article.title}}" }}
+          </a>
+        {% elif article.link %}
+          <a class="article_link" href="{{article.link}}">
+            Contact us to discuss {{article.title}}
+          </a>
         {% endif %}
         {% if article.video.url %}
           <iframe class="video" src="{{article.video.url}}" title="{{article.video.title}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -34,7 +74,7 @@
   </article>
 
 
-  {% if section.resources %}
+  {% if section.resources and not section.left %}
     <aside class="thirty">
       {% for resource in section.resources %}
         <article class="sidebar">

@@ -2,13 +2,13 @@
   "address1": "909 Capability Dr, Suite 3600",
   "address2": "Raleigh, NC, 27606",
   "author": "Behzad Aghdashi",
-  "bolded": "D.a.T.A. Lab at ITRE",
+  "bolded": "The true meaning of “Technology Transfer” in the Research Industry!",
   "bundled": "bundled-d02b783039.js",
-  "contact": "saghdas@ncsu.edu",
-  "contact_label": "Behzad Aghdashi",
-  "description": "provides analytical facilities and support to analyze big data, visualization, and predictions in transportation industry. This page serves as a central point to connect to different tools developed in this laboratory. For all the tools developed in DaTA lab, a link is placed in this screen. Different tools have different authentication methods.",
+  "contact": "support@itredatalab.org",
+  "contact_label": "support@itredatalab.org",
+  "description": "We believe in the intuitive and error-proof methods of developing research products to assure their productive and accurate implementation. ITRE DaTA Laboratory at NC State University focuses on developing software tools and database repositories for the transportation industry. The majority of the tools offered in this website needs authentication.",
   "header_contact": "If you need access to these tools, please contact",
-  "main": "main-93768b7b2e.css",
+  "main": "main-52af3967e2.css",
   "nav": [
     {
       "label": "Home",
@@ -21,10 +21,6 @@
     {
       "label": "What We Do",
       "id": "whatwedo"
-    },
-    {
-      "label": "Who We Are",
-      "id": "whoweare"
     },
     {
       "label": "Location",
@@ -56,11 +52,18 @@
         "link": "http://tvv.itredatalab.org/"
       },
       {
+        "icon": "segmentation",
+        "title": "NC State-Wide Freeway Segmentation DB",
+        "description": "This database contains entire North Carolina State's freeway segmentation for FREEVAL conststed of detailed geometric and demand information.",
+        "button": "Visit Segmentation Database",
+        "link": "http://segmentation_db.freeval.org/freeval-in-window/"
+      },
+      {
         "icon": "bike",
-        "title": "BikePed Analytics",
-        "description": "The online BiPed Analytics tool provides a comprehensive set of facilities to collect pedestrian and bicycle counts along with validation, applying correction factors, and converting them to TMG format",
-        "button": "Visit BikePed Analytics",
-        "link": "http://biped.itredatalab.org/"
+        "title": "NM COAST",
+        "description": "The online NM COAST tool provides a comprehensive set of facilities to collect pedestrian and bicycle counts along with validation, applying correction factors, and converting them to TMG format",
+        "button": "Visit NM COAST",
+        "link": "http://nmcoast.itredatalab.org/"
       },
       {
         "icon": "ramp",
@@ -68,6 +71,13 @@
         "description": "This tool is designed to help NCDOT and its stakeholders to analyze the operation of on-ramp signals in NC",
         "button": "Visit On-Ramp Signal's Evaluation Tool",
         "link": "http://rm.itredatalab.org/"
+      },
+      {
+        "icon": "artval",
+        "title": "ARTVAL",
+        "description": "ARTVAL is an arterial evaluation tool based on the 6th edition of Highway Capacity Manual (HCM). This tool provides travel time reliability and work zone analyses.",
+        "button": "Visit ARTVAL Tool",
+        "link": "http://artval.itredatalab.org"
       },
       {
         "icon": "icm",
@@ -105,7 +115,7 @@
         "link": "http://streetval.itredatalab.org/"
       },
       {
-        "icon": "",
+        "icon": "slo",
         "title": "School Location Optimization",
         "description": "SLO is a cloud based planning level optimization tool for locating the optimal locations to build new schools.",
         "button": "Visit SLO",
@@ -145,24 +155,24 @@
           "image": "Carter"
         },
         {
-          "name": "Shams Tanvi",
-          "title": "Research Associate at ITRE",
-          "image": "Tanvir"
+          "name": "Kishan Dave",
+          "title": "Research Assistant at ITRE",
+          "image": "Kishan"
         },
         {
-          "name": "Heyt Patel",
+          "name": "Sankalp Swami",
+          "title": "Research Assistant at ITRE",
+          "image": "Sankalp"
+        },
+        {
+          "name": "Xu (Tony) Dezhong",
           "title": "Software Developer",
-          "image": "Heyt"
+          "image": "Tony"
         },
         {
           "name": "Prakshat Shah",
           "title": "Software Developer",
           "image": "Prakshat"
-        },
-        {
-          "name": "Aditya Shah",
-          "title": "Software Developer",
-          "image": "Aditya"
         }
       ]
     },
@@ -239,6 +249,16 @@
           "name": "Chinmoy Jyoti",
           "title": "Graduate Student in Computer Science",
           "image": ""
+        },
+        {
+          "name": "Heyt Patel",
+          "title": "Software Developer",
+          "image": "Heyt"
+        },
+        {
+          "name": "Aditya Shah",
+          "title": "Software Developer",
+          "image": "Aditya"
         }
       ]
     }
