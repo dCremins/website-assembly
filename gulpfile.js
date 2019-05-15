@@ -70,16 +70,27 @@ gulp.task('serve', function(done) {
     }
   }, function (err, bs) {
     bs.addMiddleware("*", require('connect-gzip-static')(options.root+'/build'), {
-      override: true
+      override: false
     })
   })
-  gulp.watch(options.root+'/src/**/*', gulp.series('quick-compile', 'reload'))
+  gulp.watch(options.root+'/src/nunjucks/**/*', gulp.series('html', 'gzip', 'reload'))
+  gulp.watch(options.root+'/src/styles/**/*', gulp.series(()=>{return del([options.root+'/build/css', options.root+'/build/**/*.html', options.root+'/build/**/*.gz'])}, 'css', 'reload'))
+  gulp.watch(options.root+'/src/scripts/**/*', gulp.series('javascript', 'reload'))
   done();
 })
 
 gulp.task('reload', (done)=> {
   browserSync.reload()
   done();
+})
+
+gulp.task('clear', ()=> {
+  return del([
+    options.root+'/build/css',
+    options.root+'/build/**/*.html',
+    options.root+'/build/**/*.js',
+    options.root+'/build/**/*.gz'
+  ])
 })
 
 gulp.task('serve-python', ()=> {
@@ -125,10 +136,11 @@ gulp.task('compile-pretty', gulp.series(
 gulp.task('quick-compile', gulp.series(()=>{
   return del([
     options.root+'/build/css',
-    options.root+'/build/*.html',
-    options.root+'/build/*.js'
+    options.root+'/build/**/*.html',
+    options.root+'/build/**/*.js',
+    options.root+'/build/**/*.gz'
   ])
-}, 'html', 'javascript', 'css'))
+}, 'javascript', 'css', 'html', 'gzip'))
 
 gulp.task('build', gulp.series(
   tasks.python ? 'compile-python' : 'compile',

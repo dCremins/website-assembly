@@ -22,6 +22,16 @@
     margin: 10px;
     width: 100px;
   }
+
+  .blurb {
+    max-height: 200px;
+    transition: all .25s;
+  }
+
+  .shrink_blurb {
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
 .logo-img {

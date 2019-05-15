@@ -18,7 +18,7 @@
     </section>
     <section id="header" class="description">
       <h1 id="title" class="single-logo">{{title}}</h1>
-      <p class="full"><strong>{{bolded}}</strong> {{description}}
+      <p id="blurb" class="full blurb"><strong>{{bolded}}</strong> {{description}}
         {% if contact %}
         {{header_contact}}
         <a href="mailto:{{contact}}">{{contact_label}}</a>

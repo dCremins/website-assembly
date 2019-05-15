@@ -2,8 +2,10 @@
 
 <section id="{{section.id}}" class="flexible">
 
+  {% if section.title %} <h2>{{section.title}}</h2> {% endif %}
+
   {% if section.resources and section.left %}
-    <aside class="thirty">
+    <aside class="thirty left">
       {% for resource in section.resources %}
         <article class="sidebar">
         {% if resource.image %}
@@ -27,16 +29,11 @@
     </aside>
   {% endif %}
 
-{% if section.resources %} <article class="seventy"> {% endif %}
+{% if section.resources %} <article class="fill"> {% endif %}
 {% if not section.resources %} <article> {% endif %}
 
-    <h2 class="">{{section.title}}</h2>
-    
-    {% if section.description %}
-      <p>
-        {{section.description}}
-      </p>
-    {% endif %}
+    {% if section.description %} <p>{{section.description}}</p> {% endif %}
+
     {% if section.list %}
       <ul>
         {% for item in section.list %}
@@ -44,21 +41,23 @@
         {% endfor %}
       </ul>
     {% endif %}
+
     {% for article in section.articles %}
       <article>
-        <h3>{{article.title}}</h3>
-        <p>
-           {{article.text}}
-           {% if article.list %}
-             <ul>
-               {% for item in article.list %}
-                 <li>{{item}}</li>
-               {% endfor %}
-             </ul>
-           {% endif %}
-        </p>
+        {% if article.title %} <h3>{{article.title}}</h3> {% endif %}
+
+        {% if article.text %} <p>{{article.text}} </p> {% endif %}
+
+        {% if article.list %}
+          <ul>
+            {% for item in article.list %}
+              <li>{{item}}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
         {% if article.link.url %}
-          <a class="article_link" href="{{article.link.url}}">
+          <a class="article_link {{article.link.class}}" href="{{article.link.url}}">
             {{ article.link.text if article.link.text else "Contact us to discuss {{article.title}}" }}
           </a>
         {% elif article.link %}
@@ -66,6 +65,7 @@
             Contact us to discuss {{article.title}}
           </a>
         {% endif %}
+
         {% if article.video.url %}
           <iframe class="video" src="{{article.video.url}}" title="{{article.video.title}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         {% endif %}

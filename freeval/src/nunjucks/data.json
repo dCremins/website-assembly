@@ -3,14 +3,14 @@
   "address2": "Raleigh, NC, 27606",
   "author": "Behzad Aghdashi",
   "bolded": "FREEVAL",
-  "bundled": "bundled-6893bf3002.js",
+  "bundled": "bundled-6828a837f0.js",
   "contact": "support@freeval.org",
   "contact_label": "support@freeval.org",
   "description": "is a powerful macroscopic freeway analysis tool based on Highway Capacity Manual (HCM). Its unique features include processing speed, software reliability and user friendliness",
   "downloads": {
     "id": "downloads",
     "title": "Download FREEVAL",
-    "description": "FREEVAL is a free tool, and all versions in listed in this section can be downloaded from this website. Note that, the HCM base version is also availble at hcmvoume4.org",
+    "description": "You will find several versions of FREEVAL below. Each version is tailored to a specific set of needs. Read the description to determine which version suits your purpose. All versions of FREEVAL are free to download. Note that FREEVAL-HCM is also availble at hcmvoume4.org",
     "video": {
       "title": "",
       "url": ""
@@ -21,30 +21,36 @@
         "title": "FREEVAL-NC",
         "description": "",
         "list": [
-          "Built-in NC Freeways",
-          "Google Maps Integration",
-          "NC Specific Parameters"
-        ]
+          "Includes All Base Version Capabilities",
+          "Includes All FREEVAL+ Capabilities",
+          "Access to Online Segmentation Database",
+          "Generates PDF Reports"
+        ],
+        "button": "Download FREEVAL-NC",
+        "link": "https://docs.google.com/forms/d/e/1FAIpQLSdtu6oR-z_Gs12NcpUxWiXKSPBvF6crClzbE2XR3cxBmpa6iQ/viewform"
       },
       {
         "icon": "",
         "title": "FREEVAL+",
         "description": "",
         "list": [
-          "Google Maps Integration",
-          "Planning Level Data Entry",
-          "Auto-Calibration"
+          "Includes All Base Version Capabilities",
+          "Map-Based Segmentation and Visualization",
+          "Planning Level Demand Data Entry",
+          "Demand and Capacity Calibration Tools"
         ],
         "button": "Download FREEVAL+",
         "link": "/download/FREEVAL_PLUS_20180219.zip"
       },
       {
         "icon": "",
-        "title": "FREEVAL-HCM",
+        "title": "FREEVAL-HCM (Beta Version)",
         "description": "",
         "list": [
-          "Freeway Analysis",
-          "Reliability Analysis "
+          "Freeway Capacity Analysis",
+          "Travel Time Reliability Analysis",
+          "Managed Lanes Analysis",
+          "Work Zone Analysis"
         ],
         "button": "Download FREEVAL-HCM",
         "link": "/download/FREEVAL_HCM_20180328.zip"
@@ -80,7 +86,7 @@
   "ignore": {
     "id": "downloads"
   },
-  "main": "main-0958003cdd.css",
+  "main": "main-d3425c8509.css",
   "nav": [
     {
       "label": "Home",
@@ -152,6 +158,10 @@
           {
             "text": "FREEVAL-WZ Users Guide",
             "link": "/docs/FREEVAL_WZ_Users_Guide.pdf"
+          },
+          {
+            "text": "FREEVAL-NC Users Guide",
+            "link": "https://docs.google.com/forms/d/e/1FAIpQLSdtu6oR-z_Gs12NcpUxWiXKSPBvF6crClzbE2XR3cxBmpa6iQ/viewform"
           }
         ]
       },
@@ -188,7 +198,8 @@
         "text": "",
         "link": {
           "url": "http://freeval.org/download/FREEVAL_PLUS_20180219.zip",
-          "text": "Go to the FREEVAL-NC Freeway Segmentation Database"
+          "text": "Go to the FREEVAL-NC Freeway Segmentation Database",
+          "class": "plain"
         }
       }
     ],

@@ -4,8 +4,8 @@ footer {
   color: white;
   @include size-fallback($mt1)
   line-height: $mt1;
-  margin-top: 90px;
-  padding: 20px;
+  margin-top: 50px;
+  padding: 15px 0;
   text-align: center;
 
   a {
@@ -15,9 +15,15 @@ footer {
   article {
     box-sizing: border-box;
     display: flex;
+    flex: 1;
     flex-flow: column;
     justify-content: space-around;
-    padding: 20px;
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+
+  p {
+    margin: 10px auto;
   }
 }
 
@@ -47,7 +53,8 @@ footer {
 }
 
 .footer-img {
-  margin: 20px auto;
+  margin: 0 10px;
+  max-width: 35%;
   width: 100%;
 
   img {
@@ -73,11 +80,7 @@ footer {
     .flexible {
       margin: auto;
       max-width: 1500px;
-      width: 80%;
-    }
-
-    article {
-      max-width: 50%;
+      width: 90%;
     }
   }
 }
