@@ -3,11 +3,11 @@
     <span class="sticky_bumper"></span>
     <section class="logo">
       <a id="logo_holder"href="/" alt="{{title}}" class="logo-img full">
-        <picture id="logo_icon" class="lozad header-icon" data-iesrc="assets/logo-icon.png" data-alt="{{title}} Icon Logo">
+        <picture id="logo_icon" class="lozad header-icon top-icon" data-iesrc="assets/logo-icon.png" data-alt="{{title}} Icon Logo">
           <source srcset="assets/logo-icon.png" type="image/png">
           <source srcset="assets/logo-icon.webp" type="image/webp">
         </picture>
-        <picture id="logo_big" class="lozad header-icon" data-iesrc="assets/logo-text.png" data-alt="{{title}} Icon Logo">
+        <picture id="logo_big" class="lozad header-icon bottom-icon" data-iesrc="assets/logo-text.png" data-alt="{{title}} Icon Logo">
           <source srcset="assets/logo-text.png" type="image/png">
           <source srcset="assets/logo-text.webp" type="image/webp">
         </picture>

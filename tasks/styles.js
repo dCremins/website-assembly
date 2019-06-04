@@ -21,13 +21,6 @@ const knownOptions = {
 }
 const options = minimist(process.argv.slice(2), knownOptions)
 
-autoprefixerOptions = {
-  browsers: [
-    '> 2%',
-    'Last 2 versions',
-    'IE 11',
-  ]
-}
 
 gulp.task('sass', ()=> {
   return gulp.src(options.root+'/src/styles/main.scss')
@@ -53,13 +46,13 @@ gulp.task('sass-python', ()=> {
 gulp.task('css', gulp.series('sass', ()=>{
   const plugins = [
     mqpacker({ sort: true }),
-    cssnano(({ autoprefixer: autoprefixerOptions}))
+    cssnano(({ autoprefixer }))
   ]
   return gulp.src(options.root+'/holder/main')
 	  .pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(cleanCSS({compatibility: 'ie7'}))
-    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(autoprefixer())
     .pipe(postcss(plugins))
     .pipe(rev())
 		.pipe(sourcemaps.write())
