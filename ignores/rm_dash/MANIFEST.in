@@ -1,5 +1,0 @@
-include rm_dash/rm_dash.min.js
-include rm_dash/rm_dash.dev.js
-include rm_dash/metadata.json
-include rm_dash/package.json
-include README.md
