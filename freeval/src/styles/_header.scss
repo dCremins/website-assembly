@@ -217,7 +217,7 @@
   z-index:1;
 
   &.single-logo {
-    transform: translate(-130px, 0);
+    transform: translate(-110px, 0);
   }
 }
 
@@ -304,12 +304,14 @@
     &.sticky_logo {
       position: fixed;
       top: 0;
-    }
 
-    .sticky_logo {
-      margin: 6px 25px;
-      width: 40px;
-      transition: width .5s, padding .5s 1s;
+      img,
+      picture {
+        margin: 6px 25px;
+        width: 40px;
+        transition: width .5s, padding .5s 1s;
+        z-index: 1;
+      }
     }
   }
 
