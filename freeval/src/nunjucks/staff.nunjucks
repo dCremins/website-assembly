@@ -15,6 +15,11 @@
             <source srcset="assets/staff-{{staff.image}}.png" type="image/png">
             <source srcset="assets/staff-{{staff.image}}.webp" type="image/webp">
           </picture>
+          <noscript>
+            <div>
+              <img src="assets/staff-{{staff.image}}.png" />
+            </div>
+          </noscript>
         </div>
         {% endif %}
         <div class="staff-content">

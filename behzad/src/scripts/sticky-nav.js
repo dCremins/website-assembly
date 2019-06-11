@@ -18,17 +18,15 @@ const title = document.getElementById("title")
   const sticky_nav = navbar.offsetTop-82;
   const sticky_mobile = mobile.offsetTop;
 
-
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function checkStick() {
-  console.log('logo-top', sticky_logo)
-  console.log('position', window.pageYOffset)
-  if (window.pageYOffset > sticky_title) {
+  if (window.pageYOffset >= sticky_title) {
     title.classList.add("sticky_title")
     header.classList.add("sticky_padding")
     logo.classList.add("sticky")
     logo_icon.classList.add("sticky_fixed")
     logo_icon.classList.add("sticky_little")
+    logo_big.classList.add("asdf")
     navbar.classList.add("sticky_nav")
   } else {
     title.classList.remove("sticky_title")
@@ -38,8 +36,6 @@ function checkStick() {
     logo_icon.classList.remove("sticky_little")
     navbar.classList.remove("sticky_nav")
   }
-
-
 
   if (sticky_mobile) {
     if (window.pageYOffset > sticky_mobile) {

@@ -20,6 +20,11 @@
           <source srcset="assets/misc-building.png" type="image/png">
           <source srcset="assets/misc-building.webp" type="image/webp">
         </picture>
+        <noscript>
+          <div>
+            <img src="assets/misc-building.png" />
+          </div>
+        </noscript>
     </article>
   </section>
   <p class="disclaimer">

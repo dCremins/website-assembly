@@ -17,6 +17,11 @@
           <source srcset="assets/icon-{{tool.icon}}.png" type="image/png">
           <source srcset="assets/icon-{{tool.icon}}.webp" type="image/webp">
         </picture>
+        <noscript>
+          <div class="icon" >
+            <img src="assets/icon-{{tool.icon}}.png" />
+          </div>
+        </noscript>
       {% endif %}
 
       {% if tool.title %} <h1>{{tool.title}}</h1> {% endif %}

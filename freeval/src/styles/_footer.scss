@@ -15,7 +15,7 @@ footer {
   article {
     box-sizing: border-box;
     display: flex;
-    flex: 1;
+    flex: 1 0 0;
     flex-flow: column;
     justify-content: space-around;
     margin: 0 0 10px 0;
@@ -42,7 +42,7 @@ footer {
   }
 
   .disclaimer {
-    flex: 1;
+    flex: 1 0 0;
     padding-left: 30px;
     text-align: left;
   }

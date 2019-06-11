@@ -13,6 +13,11 @@
             <source srcset="assets/{{resource.image.url}}.png" type="image/png">
             <source srcset="assets/{{resource.image.url}}.webp" type="image/webp">
           </picture>
+          <noscript>
+            <div class="{{resource.image.class}}">
+              <img src="assets/{{resource.image.url}}.png" />
+            </div>
+          </noscript>
         {% endif %}
 
         {% if resource.title %}
@@ -83,6 +88,11 @@
             <source srcset="assets/{{resource.image.url}}.png" type="image/png">
             <source srcset="assets/{{resource.image.url}}.webp" type="image/webp">
           </picture>
+          <noscript>
+            <div class="{{resource.image.class}}">
+              <img src="assets/{{resource.image.url}}.png" />
+            </div>
+          </noscript>
         {% endif %}
 
         {% if resource.title %}

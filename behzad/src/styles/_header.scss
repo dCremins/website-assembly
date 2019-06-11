@@ -30,7 +30,7 @@
   transition: all .25s;
 
   .header-icon {
-    margin-left: 0;
+    margin: 0;
     max-width: 200px;
     transition: max-width .5s, margin-left .5s;
   }
@@ -248,13 +248,13 @@
 @include respond-above(sm) {
   .top-icon {
     position: absolute;
-    top: 30px;
+    top: 25px;
     z-index: 2;
   }
 
   .bottom-icon {
-    bottom: 23px;
     position: absolute;
+    top: 150px;
     z-index: 1;
 
     &.sticky {
@@ -289,7 +289,7 @@
     .sticky_fixed {
       position: fixed;
       padding-top: 3px;
-      top: 0;
+      top: 10px;
     }
     .sticky {
       background-color: white;
@@ -344,17 +344,17 @@
     padding: 5px 15px 5px 0;
 
     p {
-      height: 150px;
+      max-height: 250px;
       padding-left: 15px;
       overflow: hidden;
-      transition: height 300ms ease-in-out;
+      transition: max-height 300ms ease-in-out;
     }
 
     &.sticky_padding {
       padding-top: 55px;
 
       p {
-        height: 0;
+        max-height: 0;
       }
     }
   }

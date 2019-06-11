@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const plumber = require('gulp-plumber')
-const autoprefixer = require('gulp-autoprefixer')
+const autoprefixer = require('autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const cssnano = require('cssnano')
 const mqpacker = require('css-mqpacker')
@@ -46,13 +46,13 @@ gulp.task('sass-python', ()=> {
 gulp.task('css', gulp.series('sass', ()=>{
   const plugins = [
     mqpacker({ sort: true }),
-    cssnano(({ autoprefixer }))
+    cssnano(({ })),
+    autoprefixer()
   ]
   return gulp.src(options.root+'/holder/main')
 	  .pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(cleanCSS({compatibility: 'ie7'}))
-    .pipe(autoprefixer())
     .pipe(postcss(plugins))
     .pipe(rev())
 		.pipe(sourcemaps.write())
