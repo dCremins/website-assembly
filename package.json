@@ -54,7 +54,7 @@
     "list-stream": "^1.0.1",
     "markdown-it": "^8.4.2",
     "markdown-json": "^1.4.0",
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "modularscale-sass": "^3.0.7",
     "nunjucks": "^3.2.0",
     "sass": "^1.13.2",
